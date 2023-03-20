@@ -1,0 +1,51 @@
+.main {
+    display: flex;
+    width: 100%;
+    background-color: black;
+    height: calc(100vh - 100px);
+    align-items: center;
+}
+
+.titleImage {
+    display:flex;
+    width:100%;
+    margin-right:0px;
+}
+
+.logo {
+    filter: invert(27%) sepia(75%) saturate(839%) hue-rotate(70deg) brightness(96%) contrast(94%); // #1d6b0a
+    height: 800px;
+    width: 800px;
+    //transform: rotate(-20deg);
+    animation: blink 1s linear;
+    animation-name: blink;
+    margin-right:0;
+    margin-left:auto;
+}
+
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}
+
+.headTitles {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 100%;
+    justify-content: center;
+    margin-right:200px;
+}
+
+.title1 {
+    color: white;
+    font-size: 50px;
+}
+
+.title2 {
+    color: white;
+    font-size: 35px;
+    margin-left:0;
+    margin-top: 5px;
+}
