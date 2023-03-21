@@ -1,8 +1,23 @@
+import { useState } from 'react';
+
 import style from './Header.module.scss'
 
 export function Header() {
+    const [isSticky, setIsSticky] = useState(false);
+
+    // sticky Header - bg black
+    const handleScroll = () => {
+        if (window.scrollY > 10) {
+            setIsSticky(true)
+        } else {
+            setIsSticky(false)
+        }
+    }
+    window.addEventListener("scroll", handleScroll);
+
+
     return (
-        <div className={style.headerContent}>
+        <div className={isSticky ? style.stickyHeader : style.headerContent}>
             <a className={style.logoLink} href='https://www.hakacrossfit.com.br'>
                 <img className={style.logo} src="./images/full-logos/full-white-logo.png" alt="" />
             </a>
