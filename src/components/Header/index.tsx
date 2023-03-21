@@ -13,7 +13,9 @@ export function Header() {
             setIsSticky(false)
         }
     }
-    window.addEventListener("scroll", handleScroll);
+    if (typeof window !== "undefined") {
+        window.addEventListener("scroll", handleScroll);
+    }
 
 
     return (
