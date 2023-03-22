@@ -1,29 +1,24 @@
-.featuresContent{
+.featuresContent {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 50rem;
     background-color: grey;
-    
+
 }
 
 .featureCardsSection {
-    margin-top: -4rem;
-    width: 100%;
+    margin-top: -8rem;
     display: flex;
-    justify-content: center;
-    //column-gap: 0px;
-    //background-color: red;
 
     > :not(:last-child) {
-        //background-color: blue;
-        margin-right:0;
+        margin-right: 3rem;
     }
 }
 
 .featureCard {
-    height: 15rem;
-    width: 16rem;
+    height: 17rem;
+    width: 19rem;
     background-color: whitesmoke;
     border-radius: 20px 0 20px 0;
     padding: 2rem 1rem;
@@ -37,10 +32,33 @@
 }
 
 .cardTitle {
-    margin-top: 1rem;
-    font-size: 0.85rem;
+    margin-top: .75rem;
+    font-size: 0.75rem;
     font-weight: bold;
+    height: 3.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("/images/brush/brush-darkgreen.png");
+    background-size: cover;
+
+    span {
+        margin-top: 0.25rem;
+        line-height: 3.5rem;
+        text-align: center;
+        color: black;
+        margin-right: auto;
+    }
+
+    img {
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-left: auto;
+    }
 }
+
 
 .cardText {
     margin-top: 1.25rem;
