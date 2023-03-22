@@ -3,11 +3,10 @@
     width: 100%;
     background-color: black;
     background-image: 
-        //linear-gradient(to left, rgba(0, 0, 0, 1.0) 50%, transparent 100%),
+        linear-gradient(to top, rgba(0, 0, 0, 1.0) 5%, transparent 20%),
         url("/images/girl-weight3.jpg")
     ;
-    //background-color: grey;
-    background-blend-mode: luminosity;
+    //background-blend-mode: luminosity;
     background-size: cover;
     height: calc(100vh + 8rem);
     align-items: center;
@@ -55,15 +54,15 @@
     //background-color: bisque;
 
     button {
-        height: 3rem;
-        width: 12rem;
+        //height: 3rem;
+        padding: 1rem 2rem;
         background-color: inherit;
         border: 3px solid #2aa00f;
         color: white;
         border-radius: 5px;
         margin-top: 2.5rem;
         margin-left: 0px;
-        //font-size: 1.25rem;
+        font-size: 1rem;
         cursor: pointer;
 
         &:hover {

@@ -27,7 +27,7 @@ export function Header() {
             <nav className={style.links}>
                 <a href=''>Início</a>
                 <a href=''>Padrão Haka</a>
-                <a href=''>Horários</a>
+                <a href=''>Aulas</a>
                 <a href=''>Planos</a>
                 <a href=''>Galeria</a>
                 <a href=''>Contato</a>

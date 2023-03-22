@@ -18,7 +18,6 @@ export default function Home() {
             <Header/>
             <Title/>
             <Features/>
-            <AboutUs/>
         </>
     )
 }
