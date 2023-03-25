@@ -49,17 +49,38 @@ export function Header() {
                 </button>
             </nav>
 
-            <div 
+            <div
                 className={style.menu}
                 onClick={toggleMenu}
             >
-                <FiMenu 
+                <FiMenu
                     size={25}
                 />
             </div>
 
-            <div className={`${style.sideBar} ${isSidebarOpen ? style.activeSidebar : style.inactiveSidebar}`}>
 
+            {/* When sidebar is active */}
+            <div className={`${style.sideBar} ${isSidebarOpen ? style.activeSidebar : style.inactiveSidebar}`}>
+                <div className={style.sidebarContent}>
+                    <nav className={style.sidebarLangs}>
+                        <button>
+                            <img src='./images/flags/br-flag.svg' alt="" />
+                        </button>
+
+                        <button>
+                            <img src='./images/flags/uk-flag.svg' alt="" />
+                        </button>
+                    </nav>
+
+                    <nav className={style.sidebarLinks}>
+                        <a href=''>Início</a>
+                        <a href=''>Padrão Haka</a>
+                        <a href=''>Aulas</a>
+                        <a href=''>Planos</a>
+                        <a href=''>Galeria</a>
+                        <a href=''>Contato</a>
+                    </nav>
+                </div>
             </div>
         </div>
     )
