@@ -15,8 +15,8 @@ export function FeatureCards() {
                     <span>Saúde em Primeiro Lugar</span>
                 </header>
                 <p className={styles.cardText}>
-                    Priorizamos sua <span>saúde</span> antes de qualquer outro resultado.
-                    Nossos treinos são <span>adaptados</span> para você e seu corpo.
+                    Sua <span>saúde</span> vem antes de qualquer outro resultado.
+                    Treinos <span>adaptados</span> para você e seu corpo.
                 </p>
             </div>
 

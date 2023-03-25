@@ -1,4 +1,4 @@
-.featuresContent {
+.featuresSection {
     display: flex;
     flex-direction: column;
     padding: 0 5rem;
@@ -20,7 +20,6 @@
 }
 
 .featuresTitle {
-    margin-top: 6.5rem;
     margin-left: 0;
     font-size: 2.5rem;
     color: black;
@@ -40,4 +39,36 @@
         font-weight: 900;
         color: #2aa00f;
     }
+}
+
+.featuresContent {
+    margin-top: 5.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    //background-color: red;
+}
+
+.crossfitForYou {
+    margin-left: 0;
+    //background-color: blue;
+}
+
+.featureImages {
+    margin-right:0;
+    display: flex;
+    width: 50%;
+    //justify-content: right;
+    background-color: green;
+    //overflow-y: hidden;
+}
+
+.rect1 {
+    background-color: black;
+}
+
+.rect2 {
+    background-color: black;
 }
