@@ -97,3 +97,10 @@
         color: #32ea29;
     }
 }
+
+@media (max-width: 840px) {
+    .main {
+        //background-blend-mode: luminosity;
+        background-position: center;
+    }
+}

@@ -7,7 +7,8 @@ export function Header() {
     const [isSticky, setIsSticky] = useState(false);
     const [isSidebarOpen, setSidebarOpen] = useState(false);
 
-    // sticky Header - bg black
+    
+    // When scrolling, set sticky Header - solid black bg
     const handleScroll = () => {
         if (window.scrollY > 10) {
             setIsSticky(true)

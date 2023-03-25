@@ -12,7 +12,8 @@
     padding: 0 2rem;
     //align-items: center;
     background-color: rgb(199, 199, 199);
-    height: 50rem;
+    //height: 50rem;
+    padding-bottom: 5rem;
 }
 
 .featuresContent {
@@ -28,7 +29,9 @@
 }
 
 .crossfitForYou {
-    margin-left: 0;
+    //margin-left: 0;
+    justify-content: left;
+    //background-color: red;
     //min-width: 28rem;
     //background-color: blue;
 }
@@ -88,5 +91,27 @@
 @media (max-width: 840px) {
     .featuresContent {
         flex-direction: column;
+        margin-top: 3rem;
+
+        > :first-child {
+            margin-right: 0;
+        }
+    }
+
+    .crossfitForYou {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        //margin-left: 50%;
+        align-items: center;
+    }
+
+    .bgHeader {
+        max-width: 28rem;
+        line-height: 6rem;
+    }
+
+    .textContainer {
+        text-align: center;
     }
 }
