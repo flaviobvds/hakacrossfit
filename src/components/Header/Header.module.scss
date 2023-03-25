@@ -45,7 +45,6 @@
 .links {
     margin-top: auto;
     margin-bottom: auto;
-    //font-size: 1.25rem;
 
     a:not(:last-child) {
         margin-right:2.25rem;
@@ -60,8 +59,6 @@
     }
 
     a:hover {
-        //filter: opacity(0.8);
-        //filter: invert(39%) sepia(96%) saturate(504%) hue-rotate(65deg) brightness(100%) contrast(98%);
         border-bottom: 2px solid #32ea29;
         //color: #2aa00f;
         color: #32ea29;
@@ -72,8 +69,8 @@
     height: 100%;
     display: flex;
     align-items: center;
-    //background-color: yellow;
     margin-right: 0;
+    //background-color: yellow;
 
     button:not(:last-child) {
         margin-right: 1.5rem;
@@ -94,5 +91,20 @@
         &:hover {
             filter: opacity(0.8)
         }
+    }
+}
+
+@media (max-width: 840px) {
+    .links {
+        display: none;
+    }
+    .langs {
+        display: none;
+    }
+}
+
+@media (min-width: 841px) {
+    .menu {
+        display: none;
     }
 }

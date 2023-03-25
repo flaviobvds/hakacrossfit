@@ -1,9 +1,42 @@
+.features {
+    background-color: rgb(199, 199, 199);
+    //background-color: white;
+    width: 100%;
+}
+
 .featuresSection {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 0 5rem;
-    height: 50rem;
+    max-width: 1200px;
+    //align-items: center;
     background-color: rgb(199, 199, 199);
+    height: 50rem;
+}
+
+.featuresContent {
+    margin-top: 5.5rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    //background-color: red;
+
+    > :first-child {
+        margin-right: 5rem;
+    }
+}
+
+.crossfitForYou {
+    margin-left: 0;
+    min-width: 28rem;
+    //background-color: blue;
+}
+
+.featuresTitle {
+    margin-left: 0;
+    font-size: 2.5rem;
+    color: black;
+    font-weight: strong;
 }
 
 .bgHeader {
@@ -19,21 +52,14 @@
     color: white;
 }
 
-.featuresTitle {
-    margin-left: 0;
-    font-size: 2.5rem;
-    color: black;
-    font-weight: strong;
-}
-
 .textContainer {
     margin-top: .5rem;
     margin-left: 0;
     max-width: 28rem;
     font-size: 1rem;
     line-height: 1.5rem;
-    //background-color: red;
     text-align: left;
+    //background-color: red;
 
     span {
         font-weight: 900;
@@ -41,28 +67,12 @@
     }
 }
 
-.featuresContent {
-    margin-top: 5.5rem;
-    margin-right: 0;
-    margin-left: 0;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    //background-color: red;
-}
-
-.crossfitForYou {
-    margin-left: 0;
-    //background-color: blue;
-}
 
 .featureImages {
     margin-right:0;
     display: flex;
-    width: 50%;
-    //justify-content: right;
+    min-width: 28rem;
     background-color: green;
-    //overflow-y: hidden;
 }
 
 .rect1 {

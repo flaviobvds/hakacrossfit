@@ -10,18 +10,21 @@ export function Title() {
                 // </div>
             }
 
-            <section className={style.headTitles}>
-                <h1 className={style.title1}>
-                    Transforme <span>seu corpo.</span>
-                </h1>
-                <h2 className={style.title2}>
-                    Mude <span>sua vida.</span>
-                </h2>
+            <div className={style.headTitles}>
+                <section className={style.titleContent}>
+                    <h1 className={style.title1}>
+                        Transforme <span>seu corpo.</span>
+                    </h1>
+                    <h2 className={style.title2}>
+                        Mude <span>sua vida.</span>
+                    </h2>
 
-                <button type='button'>
-                    Comece hoje
-                </button>
-            </section>
+                    <button type='button'>
+                        Comece hoje
+                    </button>
+                </section>
+            </div>
+
         </main>
     )
 }
