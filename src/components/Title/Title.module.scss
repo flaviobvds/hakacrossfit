@@ -2,10 +2,9 @@
     display: flex;
     width: 100%;
     background-color: black;
-    background-image: 
+    background-image:
         //linear-gradient(to top, rgba(0, 0, 0, 1.0) 5%, transparent 20%),
-        url("/images/girl-weight3.jpg")
-    ;
+        url("/images/girl-weight3.jpg");
     //background-blend-mode: luminosity;
     background-size: cover;
     height: calc(100vh + 8rem);
@@ -13,6 +12,7 @@
     justify-content: center;
 }
 
+/*
 .titleImage {
     display:flex;
     width:100%;
@@ -41,6 +41,7 @@
     50%{opacity: .5;}
     100%{opacity: 1;}
 }
+*/
 
 .headTitles {
     display: flex;
@@ -56,21 +57,21 @@
     flex-direction: column;
     margin-left: auto;
     padding-right: 2rem;
+}
 
-    button {
-        padding: 1rem 2rem;
-        background-color: inherit;
-        border: 3px solid #2aa00f;
-        color: white;
-        border-radius: 5px;
-        margin-top: 2.5rem;
-        margin-left: 0px;
-        font-size: 1rem;
-        cursor: pointer;
+.mainButton {
+    padding: 1rem 2rem;
+    background-color: inherit;
+    border: 3px solid #2aa00f;
+    color: white;
+    border-radius: 5px;
+    margin-top: 2.5rem;
+    margin-left: 0px;
+    font-size: 1rem;
+    cursor: pointer;
 
-        &:hover {
-            background-color: rgba(8, 8, 8, 0.5);
-        }
+    &:hover {
+        background-color: rgba(8, 8, 8, 0.5);
     }
 }
 
@@ -90,7 +91,7 @@
     color: white;
     font-weight: normal;
     font-size: 1.5rem;
-    margin-left:0;
+    margin-left: 0;
     margin-top: 0.75rem;
 
     span {
@@ -98,9 +99,33 @@
     }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 920px) {
     .main {
         //background-blend-mode: luminosity;
-        background-position: center;
+        background-position: right 57% top 0;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 640px) {
+    .title1 {
+        font-size: 1.25rem;
+    }
+
+    .title2 {
+        font-size: 1rem;
+        text-align: right;
+    }
+
+    .titleContent {
+        padding-right: 1rem;
+    }
+
+    .mainButton {
+        padding: 0.75rem 1rem;
+        margin-top: 1.5rem;
+        margin-left: auto;
+        //margin-right: auto;
+        width: 10rem;
     }
 }

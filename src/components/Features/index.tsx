@@ -12,7 +12,9 @@ export function Features() {
                     <div className={styles.crossfitForYou}>
                         <h1 className={styles.featuresTitle}>
                             <header className={styles.bgHeader}>
-                                <span>SIM</span>
+                                <span className={styles.bgHeaderTitle}>
+                                    SIM
+                                </span>
                             </header>
                             Crossfit é para você
                         </h1>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FiMenu } from 'react-icons/fi'
 
 import style from './Header.module.scss'
@@ -10,7 +10,7 @@ export function Header() {
     
     // When scrolling, set sticky Header - solid black bg
     const handleScroll = () => {
-        if (window.scrollY > 10) {
+        if (window.scrollY > 1) {
             setIsSticky(true)
         } else {
             setIsSticky(false)
@@ -24,6 +24,10 @@ export function Header() {
     function toggleMenu() {
         setSidebarOpen(!isSidebarOpen);
     }
+
+    useEffect(() => {
+        isSidebarOpen ? setIsSticky(true) : setIsSticky(false)
+    }, [isSidebarOpen])
 
     return (
         <div className={isSticky ? style.stickyHeader : style.headerContent}>

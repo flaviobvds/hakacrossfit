@@ -19,7 +19,10 @@ export function Title() {
                         Mude <span>sua vida.</span>
                     </h2>
 
-                    <button type='button'>
+                    <button
+                        className={style.mainButton}
+                        type='button'
+                    >
                         Comece hoje
                     </button>
                 </section>

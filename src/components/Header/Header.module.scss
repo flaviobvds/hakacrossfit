@@ -1,31 +1,31 @@
 .stickyHeader {
     position: fixed;
     z-index: 50;
-    color:white;
+    color: white;
     width: 100%;
     height: 5rem;
     display: flex;
     justify-content: space-between;
     background-color: rgb(8, 8, 8);
     //background-color: red;
-    padding: 0 50px;
+    padding: 0 2rem;
 }
 
 .headerContent {
     position: fixed;
     z-index: 50;
-    color:white;
+    color: white;
     width: 100%;
     height: 5rem;
     display: flex;
     justify-content: space-between;
     background-color: rgba(8, 8, 8, 0.3);
-    padding: 0 50px;
+    padding: 0 2rem;
 }
 
 .logoLink {
     margin-left: 0;
-    
+
     &:hover {
         filter: brightness(0.8);
         //filter: invert(39%) sepia(96%) saturate(504%) hue-rotate(65deg) brightness(100%) contrast(98%);
@@ -37,9 +37,9 @@
 }
 
 .logo {
-    height:8rem;
+    height: 8rem;
     clip-path: inset(2.5rem 0px 2.25rem 0px);
-    margin-top:-1.5rem;
+    margin-top: -1.5rem;
 }
 
 .links {
@@ -80,7 +80,7 @@
     }
 
     button {
-        background-color: inherit;  
+        background-color: inherit;
         border: none;
     }
 
@@ -88,7 +88,7 @@
         width: 1.5rem;
         height: 1.5rem;
         cursor: pointer;
-        
+
         filter: drop-shadow(1px 1px 1px black);
 
         &:hover {
@@ -105,24 +105,31 @@
     padding-left: .5rem;
     margin-right: -.5rem;
     //background-color: red;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .sideBar.inactiveSidebar {
-    display: none;
+    //display: none;
+    position: absolute;
+    top: 5rem;
+    left: -150vh;
+    background-color: whitesmoke;
+    transition: all 0.75s;
 }
 
-.sideBar.activeSidebar {
+.sideBar {
     position: absolute;
-    top:5rem;
-    left:0;
-    height:calc(100vh - 5rem);
+    top: 5rem;
+    left: 0;
+    height: calc(100svh - 5rem);
     width: 100vw;
     background-color: whitesmoke;
     z-index: 10;
+    //animation: pullSidebar .5s ease;
+    transition: all 0.5s;
 }
 
-.sidebarContent{
+.sidebarContent {
     //justify-content: center;
     align-items: center;
     display: flex;
@@ -131,7 +138,7 @@
     height: 100%;
 }
 
-.sidebarLangs{
+.sidebarLangs {
     //height: 100%;
     margin-top: 2rem;
     display: flex;
@@ -141,7 +148,7 @@
     //background-color: yellow;
 
     button {
-        background-color: inherit;  
+        background-color: inherit;
         border: none;
         padding: .5rem 1.25rem;
     }
@@ -150,7 +157,7 @@
         width: 2.5rem;
         height: 2.5rem;
         cursor: pointer;
-        
+
         //filter: drop-shadow(1px 1px 1px black);
 
         &:hover {
@@ -186,13 +193,55 @@
 }
 
 @media (max-width: 840px) {
-    .links, .langs {
+
+    .headerContent,
+    .stickyHeader {
+        padding: 0 1.5rem;
+    }
+
+    .links,
+    .langs {
         display: none;
     }
 }
 
 @media (min-width: 841px) {
-    .menu, .sideBar{
+
+    .menu,
+    .sideBar {
+        display: none;
+    }
+}
+
+@keyframes pullSidebar {
+    from {
+        left: -100vh;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+
+@keyframes pushSidebar {
+    0% {
+        left: 0;
+        display:flex;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        height: calc(100svh - 5rem);
+        width: 100vw;
+        background-color: whitesmoke;
+        z-index: 10;
+    }
+
+    99% {
+        left: -100vh;
+    }
+
+    100% {
         display: none;
     }
 }
