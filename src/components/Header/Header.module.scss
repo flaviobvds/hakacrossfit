@@ -46,15 +46,18 @@
     margin-top: auto;
     margin-bottom: auto;
 
+    /*
     a:not(:last-child) {
         margin-right:2.25rem;
     }
+    */
 
     a {
         display: inline-block;
         line-height: 5rem;
         height: 5rem;
         position: relative;
+        padding: 0 1rem;
         //background-color: aqua;
     }
 
@@ -92,6 +95,31 @@
             filter: opacity(0.8)
         }
     }
+}
+
+.menu {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    margin-right: -.5rem;
+    //background-color: red;
+    cursor:pointer;
+}
+
+.sideBar.inactiveSidebar {
+    display: none;
+}
+
+.sideBar.activeSidebar {
+    
+    position: absolute;
+    top:5rem;
+    right:0;
+    height:calc(100vh - 5rem);
+    width: 100vw;
+    background-color: whitesmoke;
 }
 
 @media (max-width: 840px) {

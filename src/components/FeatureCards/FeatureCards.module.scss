@@ -8,15 +8,15 @@
 }
 
 .featureCard {
-    height: 20rem;
-    width: 21rem;
-    min-width: 21rem;
+    height: 22.5rem;
+    width: 30%;
+    min-width: 18rem;
     background-color: whitesmoke;
     border-radius: 20px 0 20px 0;
-    padding: 2rem 1rem;
+    padding: 3.5rem 1rem 0 1rem;
     display: flex;
     flex-direction: column;
-    filter: drop-shadow(3px 3px 8px #000000);
+    filter: drop-shadow(2px 2px 5px #000000);
 }
 
 .healthIcon {
@@ -26,23 +26,24 @@
 
 .cardTitle {
     margin: 0 auto;
-    margin-top: .75rem;
-    font-size: 0.85rem;
-    font-weight: bold;
-    height: 3.5rem;
+    margin-top: .5rem;
+    height: 5rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-image: url("/images/brush/brush-darkgreen.png");
-    background-size: cover;
+    //background-image: url("/images/brush/brush-darkgreen.png");
+    //background-size: cover;
 
     span {
-        margin-top: 0.5rem;
-        line-height: 3.5rem;
+        margin-top: -0.5rem;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        font-weight: bold;
         text-align: center;
-        color: rgba(0,0,0,0.9);
+        //color: rgba(0,0,0,0.9);
+        color: #2aa00f;
         margin-right: auto;
         margin-left: auto;
     }
@@ -56,13 +57,14 @@
 
 
 .cardText {
-    margin-top: 1.25rem;
+    margin-top: 1rem;
     font-size: 1rem;
     text-align: center;
     line-height: 1.25rem;
 
     span {
-        color: #2aa00f;
+        //color: #2aa00f;
+        color: black;
         font-weight: bold;
     }
 }

@@ -12,7 +12,7 @@ export function FeatureCards() {
                     className={styles.healthIcon}
                 />
                 <header className={styles.cardTitle}>
-                    <span>Saúde em Primeiro Lugar</span>
+                    <span>Saúde em <br/>Primeiro Lugar</span>
                 </header>
                 <p className={styles.cardText}>
                     Sua <span>saúde</span> vem antes de qualquer outro resultado.
@@ -28,7 +28,7 @@ export function FeatureCards() {
                     className={styles.healthIcon}
                 />
                 <header className={styles.cardTitle}>
-                    <span>Acompanhamento Profissional</span>
+                    <span>Acompanhamento<br/>Profissional</span>
                 </header>
                 <p className={styles.cardText}>
                     Acompanhamento personalizado de profissionais <span>capacitados </span>
@@ -45,7 +45,7 @@ export function FeatureCards() {
                     className={styles.healthIcon}
                 />
                 <header className={styles.cardTitle}>
-                    <span>Progressão sob Controle</span>
+                    <span>Progressão <br/>sob Controle</span>
                 </header>
                 <p className={styles.cardText}>
                     Aulas elaboradas para a sua <span>evolução</span> constante

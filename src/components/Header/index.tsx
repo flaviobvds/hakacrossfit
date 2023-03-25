@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { FiMenu } from 'react-icons/fi'
 
 import style from './Header.module.scss'
 
 export function Header() {
     const [isSticky, setIsSticky] = useState(false);
+    const [isSidebarOpen, setSidebarOpen] = useState(false);
 
     // sticky Header - bg black
     const handleScroll = () => {
@@ -17,6 +19,10 @@ export function Header() {
         window.addEventListener("scroll", handleScroll);
     }
 
+
+    function toggleMenu() {
+        setSidebarOpen(!isSidebarOpen);
+    }
 
     return (
         <div className={isSticky ? style.stickyHeader : style.headerContent}>
@@ -42,6 +48,19 @@ export function Header() {
                     <img src='./images/flags/uk-flag.svg' alt="" />
                 </button>
             </nav>
+
+            <div 
+                className={style.menu}
+                onClick={toggleMenu}
+            >
+                <FiMenu 
+                    size={25}
+                />
+            </div>
+
+            <div className={`${style.sideBar} ${isSidebarOpen ? style.activeSidebar : style.inactiveSidebar}`}>
+
+            </div>
         </div>
     )
 }
