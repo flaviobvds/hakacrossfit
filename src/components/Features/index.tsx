@@ -21,8 +21,7 @@ export function Features() {
 
                         <div className={styles.textContainer}>
                             Nossa metodologia não escolhe público. Funciona com todos.
-                            Não trata-se de mágica, mas sim de <span>resultados</span>.
-                            <br />
+                            Não é com mágica, mas sim com <span>resultados</span>.
                             Através do Crossfit, conseguimos entregar evolução mais
                             rápida e de forma mais segura.
                             Conheça a revolução do mundo fitness que já mudou <span>milhões </span>

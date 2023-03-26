@@ -36,12 +36,12 @@ export function Header() {
             </a>
 
             <nav className={style.links}>
-                <a href=''>Início</a>
-                <a href=''>Padrão Haka</a>
-                <a href=''>Aulas</a>
-                <a href=''>Planos</a>
-                <a href=''>Galeria</a>
-                <a href=''>Contato</a>
+                <a href='/'>Início</a>
+                <a href='/hakaway'>Padrão Haka</a>
+                <a href='/classes'>Aulas</a>
+                <a href='/plans'>Planos</a>
+                <a href='/gallery'>Galeria</a>
+                <a href='/contact'>Contato</a>
             </nav>
 
             <nav className={style.langs}>

@@ -1,3 +1,5 @@
+import { Header } from '@/components/Header'
+import Head from 'next/head'
 import '@/styles/globals.scss'
 import type { AppProps } from 'next/app'
 import { Roboto, Inter } from 'next/font/google'
@@ -11,8 +13,15 @@ const roboto = Roboto({
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
-        <main className={inter.className}>
-            <Component {...pageProps} />
-        </main>
+        <>
+            <Head>
+                <title>Haka Crossfit</title>
+            </Head>
+
+            <main className={inter.className}>
+                <Header />
+                <Component {...pageProps} />
+            </main>
+        </>
     )
 }
