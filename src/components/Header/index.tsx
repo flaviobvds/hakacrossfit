@@ -7,7 +7,7 @@ export function Header() {
     const [isSticky, setIsSticky] = useState(false);
     const [isSidebarOpen, setSidebarOpen] = useState(false);
 
-    
+
     // When scrolling, set sticky Header - solid black bg
     const handleScroll = () => {
         if (window.scrollY > 1) {
@@ -78,12 +78,12 @@ export function Header() {
                     </nav>
 
                     <nav className={style.sidebarLinks}>
-                        <a href=''>Início</a>
-                        <a href=''>Padrão Haka</a>
-                        <a href=''>Aulas</a>
-                        <a href=''>Planos</a>
-                        <a href=''>Galeria</a>
-                        <a href=''>Contato</a>
+                        <a href='/'>Início</a>
+                        <a href='/hakaway'>Padrão Haka</a>
+                        <a href='/classes'>Aulas</a>
+                        <a href='/plans'>Planos</a>
+                        <a href='/gallery'>Galeria</a>
+                        <a href='/contact'>Contato</a>
                     </nav>
                 </div>
             </div>

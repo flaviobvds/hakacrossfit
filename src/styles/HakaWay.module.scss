@@ -1,4 +1,164 @@
 .main {
     margin-top: 5rem;
+    //background-color: black;
+    width: 100%;
+}
+
+.hakawayContent {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    //padding: 0 1rem;
     color: white;
+    align-items: center;
+}
+
+.bgHeader {
+    background-image: url("/images/brush/brush-white.png");
+    background-size: cover;
+    height: 4.5rem;
+    width: 18rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.bgHeaderTitle {
+    font-size: 1.25rem;
+    margin-top: 1.3rem;
+    color: black;
+    font-weight: bold;
+}
+
+.introduction {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 1200px;
+    padding-bottom: 5rem;
+    //background-image: linear-gradient(to bottom, black 90%, rgb(226, 226, 226) 100%);
+}
+
+.fireContainer {
+    display: flex;
+}
+
+.fire {
+    height: calc(100svh - 5rem - 3rem - 4.5rem - 4rem);
+    max-height: 24.5rem;
+    mask-image: linear-gradient(to right, transparent 0%, black 50%, transparent 100%);
+}
+
+.introductionText {
+    //background-color: green;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    >p {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+
+    span {
+        font-weight: bold;
+        color: #2aa00f;
+    }
+}
+
+.featureList {
+    margin-top: 1.5rem;
+    list-style: none;
+    width: 60%;
+
+    >li {
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        //border-bottom: 1px solid rgba(42, 160, 15, 0.4);
+        cursor: pointer;
+    }
+
+    >li:hover {
+        //background-color: rgba(255,255,255,0.1);
+        background-color: rgba(50, 234, 41, 0.2);
+        font-weight: bold;
+    }
+}
+
+.affiliate {
+    background-color: rgb(226, 226, 226);
+    //height: 20rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bgHeaderBlack {
+    background-image: url("/images/brush/brush-black.png");
+    background-size: cover;
+    height: 4.5rem;
+    width: 18rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.bgHeaderTitleBlack {
+    margin-top: 1.3rem;
+    color: white;
+    font-weight: bold;
+}
+
+.affiliateContent {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+    //background-color: #2aa00f;
+}
+
+.affiliateText {
+    //background-color: red;
+    //margin-top: 2rem;
+    color: black;
+
+    >span {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: black;
+    }
+}
+
+.test {
+    max-width: 400px;
+
+    >span {
+        color: #2aa00f;
+        font-weight: bold;
+    }
+}
+
+.affiliateImage {
+    margin: auto;
+    position: relative;
+}
+
+.coachImage {
+    width: 100%;
+    max-height: 16rem;
+    //mix-blend-mode: luminosity;
+}
+
+.crossfitCertificate {
+    position:absolute;
+    top:-30px;
+    right:-50px;
+    height: 130px;
+    z-index:1;
 }

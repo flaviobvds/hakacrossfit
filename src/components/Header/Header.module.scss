@@ -194,6 +194,8 @@
     }
 }
 
+// MOBILE DESIGN:
+
 @media (max-width: 840px) {
 
     .headerContent,
@@ -225,6 +227,19 @@
     }
 }
 
+
+
+// MOBILE HORIZONTAL DESIGN
+
+@media (max-height: 500px) {
+    .sideBar {
+        overflow: scroll;
+    }
+}
+
+
+
+// ANIMATION EFFECTS:
 
 @keyframes pushSidebar {
     0% {
