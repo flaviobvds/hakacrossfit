@@ -40,7 +40,7 @@ export function FeatureCards() {
             <div className={styles.featureCard}>
                 <img
                     src="./images/icons/training-plan.png"
-                    alt="health"
+                    alt="training_plan"
                     height="70"
                     className={styles.healthIcon}
                 />

@@ -32,9 +32,11 @@ export function Features() {
                     </div>
 
                     <div className={styles.featureImages}>
-                        <div className={styles.rect1}>
-                            Rect 1
-                        </div>
+                    <img
+                                src="./images/murph.gif"
+                                alt="murph"
+                                className={styles.gif}
+                            />
                     </div>
 
                 </div>
