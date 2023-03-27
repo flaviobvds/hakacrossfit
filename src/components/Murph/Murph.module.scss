@@ -1,5 +1,5 @@
 .murph {
-    background-color: rgb(83, 61, 0);
+    background-color: rgb(206, 164, 47);
     //height: 20rem;
     padding: 8rem 0;
     width: 100%;
@@ -24,7 +24,7 @@
     font-weight: bold;
 }
 
-.affiliateContent {
+.murphContent {
     width: 100%;
     max-width: 1000px;
     display: grid;
@@ -33,45 +33,61 @@
     //background-color: #2aa00f;
 }
 
-.affiliateText {
+.murphText {
     //background-color: red;
     //margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: black;
 
     >span {
+        text-align: center;
         font-size: 1.5rem;
         font-weight: bold;
         color: black;
     }
 }
 
-.test {
+.murphPar {
     max-width: 400px;
+    text-align: center;
 
     >span {
-        color: #2aa00f;
+        //color: #2aa00f;
         font-weight: bold;
     }
 }
 
-.affiliateImage {
+.murphList {
     margin: auto;
-    position: relative;
+    color: black;
+    display: flex;
+    flex-direction: column;
+
+    > ul {
+        list-style: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: .5rem;
+        border-bottom: 1px solid black;
+        margin-top: 0;
+        margin-bottom: .25rem;
+    }
+
+    > span {
+        font-size: 2rem;
+        border-top: 1px solid black;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+        padding-top: .75rem;
+    }
 }
 
-.coachImage {
-    width: 100%;
-    max-height: 16rem;
-    //mix-blend-mode: luminosity;
-}
 
-.crossfitCertificate {
-    position:absolute;
-    top:-30px;
-    right:-50px;
-    height: 130px;
-    z-index:1;
-}
 
 
 
