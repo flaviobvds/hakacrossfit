@@ -98,7 +98,7 @@
         padding: 3rem 0;
     }
 
-    .affiliateContent {
+    .murphContent {
         display: flex;
         flex-direction: column;
         padding: 0 2rem;
@@ -106,13 +106,18 @@
         
     }
 
-    .affiliateText {
+    .murphText {
         > span {
             text-align: center;
         }
     }
 
-    .affiliateImage {
+    .murphList {
         margin-top: 1rem;
+        margin-bottom: 3.5rem;
+
+        > span {
+            padding-top: .25rem;
+        }
     }
 }

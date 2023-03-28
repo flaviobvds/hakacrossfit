@@ -1,0 +1,102 @@
+.tepequem {
+    background-color: black;
+    //height: 20rem;
+    padding: 8rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bgHeaderWhite {
+    background-image: url("/images/brush/brush-white.png");
+    background-size: cover;
+    height: 4.5rem;
+    width: 18rem;
+    //margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.bgHeaderTitleWhite {
+    margin-top: 1.3rem;
+    color: black;
+    font-weight: bold;
+}
+
+.tepequemContent {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 4rem;
+}
+
+.tepequemText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    >span {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+    }
+}
+
+.tepequemParagraph {
+    max-width: 400px;
+    text-align: center;
+
+    >span {
+        color: #2aa00f;
+        font-weight: bold;
+    }
+}
+
+.tepequemVideo {
+    margin: auto;
+    position: relative;
+}
+
+.coachImage {
+    width: 100%;
+    max-height: 16rem;
+}
+
+
+
+// MOBILE DESIGN: 
+
+@media (max-width: 840px) {
+    .tepequem {
+        padding: 3rem 0;
+    }
+
+    .tepequemContent {
+        display: flex;
+        flex-direction: column;
+        padding: 0 2rem;
+        margin-top: 1rem;
+        
+    }
+
+    .tepequemText {
+        > span {
+            text-align: center;
+            font-size: 1.25rem;
+        }
+    }
+
+    .tepequemVideoDiv{
+        max-width: 100%;
+        margin: 0 auto 1rem auto;
+        order: -1;
+    }
+
+    .tepequemVideo {
+        margin: 1rem 0;
+    }
+}
