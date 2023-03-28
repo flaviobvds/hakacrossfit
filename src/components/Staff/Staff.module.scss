@@ -1,5 +1,5 @@
-.affiliate {
-    background-color: rgb(226, 226, 226);
+.staff {
+    background-color: rgb(206, 164, 47);
     //height: 20rem;
     padding: 8rem 0;
     width: 100%;
@@ -24,7 +24,7 @@
     font-weight: bold;
 }
 
-.affiliateContent {
+.staffContent {
     width: 100%;
     max-width: 1000px;
     display: grid;
@@ -33,7 +33,7 @@
     //background-color: #2aa00f;
 }
 
-.affiliateText {
+.staffText {
     //background-color: red;
     //margin-top: 2rem;
     display: flex;
@@ -41,55 +41,64 @@
     justify-content: center;
     align-items: center;
     color: black;
-    //background-color: red;
 
     >span {
+        text-align: center;
         font-size: 1.5rem;
         font-weight: bold;
         color: black;
     }
 }
 
-.affiliateParag {
+.staffPar {
     max-width: 400px;
     text-align: center;
 
     >span {
-        color: #2aa00f;
+        //color: #2aa00f;
         font-weight: bold;
     }
 }
 
-.affiliateImage {
+.staffList {
     margin: auto;
-    position: relative;
+    color: black;
+    display: flex;
+    flex-direction: column;
+
+    > ul {
+        list-style: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: .5rem;
+        border-bottom: 1px solid black;
+        margin-top: 0;
+        margin-bottom: .25rem;
+    }
+
+    > span {
+        font-size: 2rem;
+        border-top: 1px solid black;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+        padding-top: .75rem;
+    }
 }
 
-.coachImage {
-    width: 100%;
-    max-width: 903px;
-    max-height: 682px;
-    //mix-blend-mode: luminosity;
-}
-
-.crossfitCertificate {
-    position:absolute;
-    top:-30px;
-    right:-50px;
-    height: 130px;
-    z-index:1;
-}
 
 
 
-// MOBILE DESIGN: 
+
+// MOBILE DESIGN
 
 @media (max-width: 840px) {
-    .affiliate {
+    .staff {
         padding: 3rem 0;
     }
 
-    .affiliateContent {
+    .staffContent {
         display: flex;
         flex-direction: column;
         padding: 0 2rem;
@@ -97,15 +106,18 @@
         
     }
 
-    .affiliateText {
+    .staffText {
         > span {
             text-align: center;
-            font-size: 1.25rem;
         }
     }
 
-    .affiliateImage {
-        margin: 1rem 0;
-        order: -1;
+    .staffList {
+        margin-top: 1rem;
+        margin-bottom: 3.5rem;
+
+        > span {
+            padding-top: .25rem;
+        }
     }
 }

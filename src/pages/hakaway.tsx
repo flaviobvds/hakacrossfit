@@ -1,6 +1,7 @@
 import { CrossfitAffiliate } from '@/components/CrossfitAffiliate'
 import { LiveInTepequem } from '@/components/LiveInTepequem'
 import { Murph } from '@/components/Murph'
+import { Staff } from '@/components/Staff'
 
 import styles from '../styles/HakaWay.module.scss'
 
@@ -45,6 +46,7 @@ export default function HakaWay() {
                     <CrossfitAffiliate />
                     <Murph />
                     <LiveInTepequem />
+                    <Staff />
 
                 </div>
             </div>

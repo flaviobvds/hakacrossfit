@@ -56,8 +56,13 @@
     }
 }
 
+.tepequemVideoDiv {
+    max-width: 100%;
+    margin: 0 auto 1rem auto;
+}
+
 .tepequemVideo {
-    margin: auto;
+    margin: 0 auto;
     position: relative;
 }
 
@@ -91,8 +96,6 @@
     }
 
     .tepequemVideoDiv{
-        max-width: 100%;
-        margin: 0 auto 1rem auto;
         order: -1;
     }
 
