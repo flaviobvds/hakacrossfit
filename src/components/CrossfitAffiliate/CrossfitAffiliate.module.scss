@@ -1,11 +1,13 @@
 .affiliate {
-    background-color: rgb(226, 226, 226);
+    //background-color: rgb(226, 226, 226);
     //height: 20rem;
     padding: 8rem 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('/images/features-bg2.jpg');
+    background-size: cover;
 }
 
 .bgHeaderBlack {

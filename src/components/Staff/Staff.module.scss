@@ -1,11 +1,12 @@
 .staff {
-    background-color: rgb(206, 164, 47);
-    //height: 20rem;
+    background-color: whitesmoke;
     padding: 8rem 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('/images/features-bg2.jpg');
+    background-size: cover;
 }
 
 .bgHeaderBlack {
@@ -27,67 +28,50 @@
 .staffContent {
     width: 100%;
     max-width: 1000px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     margin-top: 4rem;
     //background-color: #2aa00f;
 }
 
-.staffText {
-    //background-color: red;
-    //margin-top: 2rem;
+.coachInfo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     color: black;
-
-    >span {
-        text-align: center;
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: black;
-    }
-}
-
-.staffPar {
-    max-width: 400px;
     text-align: center;
-
-    >span {
-        //color: #2aa00f;
-        font-weight: bold;
-    }
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    background-color: rgb(184, 184, 184);
+    filter: drop-shadow(3px 3px 10px black);
 }
 
-.staffList {
-    margin: auto;
-    color: black;
-    display: flex;
-    flex-direction: column;
-
-    > ul {
-        list-style: none;
-        font-size: 1.5rem;
-        font-weight: bold;
-        text-align: center;
-        padding-bottom: .5rem;
-        border-bottom: 1px solid black;
-        margin-top: 0;
-        margin-bottom: .25rem;
-    }
-
-    > span {
-        font-size: 2rem;
-        border-top: 1px solid black;
-        font-weight: bold;
-        width: 100%;
-        text-align: center;
-        padding-top: .75rem;
-    }
+.coachName {
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    //color: #2aa00f;
 }
 
+.coachTitle {
+    font-weight: bold;
+    margin-top: .25rem;
+    color: #2aa00f;
+}
 
+.coachCertification {
+    margin-top: .25rem;
+}
+
+.roundImg {
+    max-width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    > img {
+        max-width: 100%;
+        display: block;
+    }
+}
 
 
 
@@ -103,21 +87,6 @@
         flex-direction: column;
         padding: 0 2rem;
         margin-top: 1rem;
-        
-    }
 
-    .staffText {
-        > span {
-            text-align: center;
-        }
-    }
-
-    .staffList {
-        margin-top: 1rem;
-        margin-bottom: 3.5rem;
-
-        > span {
-            padding-top: .25rem;
-        }
     }
 }

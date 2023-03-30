@@ -10,27 +10,49 @@ export function Staff() {
             </header>
 
             <div className={styles.staffContent}>
-                <div className={styles.staffList}>
-                    <ul>
-                        <li>1 Mile Run</li>
-                        <li>100 Pull-Ups</li>
-                        <li>200 Push-Ups</li>
-                        <li>300 Squats</li>
-                        <li>1 Mile Run</li>
-                    </ul>
-                    <span>"MURPH"</span>
+                <div className={styles.coachInfo}>
+                    <div className={styles.roundImg}>
+                        <img src="/images/neozito2.jpg" alt="coach1" />
+                    </div>
+                    <span className={styles.coachName}>
+                        Neo Almeida
+                    </span>
+                    <span className={styles.coachTitle}>
+                        Coach
+                    </span>
+                    <span className={styles.coachCertification}>
+                        CrossFit® Level One
+                    </span>
                 </div>
 
-                <div className={styles.staffText}>
-                    <span>Coloque seus limites à prova</span>
-                    <p className={styles.staffPar}>
-                        Uma vez por ano temos um treino que vai testar seus
-                        limites. O <span>Murph</span> é um WOD longo que irá desafiar você
-                        e serve como <span>benchmark</span> no mundo do Crossfit.
-                        No Haka tratamos o Murph como um evento anual para 
-                        o qual você irá se preparar e ao final terá a satisfação
-                        de ter superado este imenso desafio.
-                    </p>
+                <div className={styles.coachInfo}>
+                    <div className={styles.roundImg}>
+                        <img src="/images/vivi2.jpg" alt="coach2" />
+                    </div>
+                    <span className={styles.coachName}>
+                        Vivi Sousa
+                    </span>
+                    <span className={styles.coachTitle}>
+                        Head Coach
+                    </span>
+                    <span className={styles.coachCertification}>
+                        CrossFit® Level One
+                    </span>
+                </div>
+
+                <div className={styles.coachInfo}>
+                    <div className={styles.roundImg}>
+                        <img src="/images/cassiano2.jpg" alt="coach3" />
+                    </div>
+                    <span className={styles.coachName}>
+                        Cassiano Ricardo
+                    </span>
+                    <span className={styles.coachTitle}>
+                        Coach
+                    </span>
+                    <span className={styles.coachCertification}>
+                        CrossFit® Level One
+                    </span>
                 </div>
             </div>
         </section>
