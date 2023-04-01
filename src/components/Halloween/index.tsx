@@ -38,7 +38,7 @@ export function Halloween() {
                         hasWindow &&
                         <video
                             muted autoPlay loop
-                            src={"/videos/halloween.mp4"}
+                            src={"/videos/halloween2.mp4"}
                             style={{ width: "225px", height: "400px" }}
                             className={styles.halloweenVideo}
                         />
