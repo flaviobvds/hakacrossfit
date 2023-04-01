@@ -1,3 +1,5 @@
+import { MdOutlineEmail } from 'react-icons/md';
+
 import styles from './Staff.module.scss'
 
 export function Staff() {
@@ -24,6 +26,19 @@ export function Staff() {
                     <span className={styles.coachCertification}>
                         CrossFit® Level One
                     </span>
+
+                    <div className={styles.social}>
+                        <a href="https://www.instagram.com/neoalmeida/">
+                            <img
+                                src="/images/icons/instagram.png"
+                                alt="instagram"
+                                className={styles.instagram}
+                            />
+                        </a>
+                        <a href="mailto:mailto:neozitojr@hotmail.com">
+                            <MdOutlineEmail size={'22px'} color={'#000'} />
+                        </a>
+                    </div>
                 </div>
 
                 <div className={styles.coachInfo}>
@@ -39,6 +54,19 @@ export function Staff() {
                     <span className={styles.coachCertification}>
                         CrossFit® Level One
                     </span>
+
+                    <div className={styles.social}>
+                        <a href="https://www.instagram.com/vivian_ssousa/">
+                            <img
+                                src="/images/icons/instagram.png"
+                                alt="instagram"
+                                className={styles.instagram}
+                            />
+                        </a>
+                        <a href="mailto:mailto:neozitojr@hotmail.com">
+                            <MdOutlineEmail size={'22px'} color={'#000'} />
+                        </a>
+                    </div>
                 </div>
 
                 <div className={styles.coachInfo}>
@@ -54,6 +82,19 @@ export function Staff() {
                     <span className={styles.coachCertification}>
                         CrossFit® Level One
                     </span>
+
+                    <div className={styles.social}>
+                        <a href="https://www.instagram.com/cassiricardo/">
+                            <img
+                                src="/images/icons/instagram.png"
+                                alt="instagram"
+                                className={styles.instagram}
+                            />
+                        </a>
+                        <a href="mailto:mailto:neozitojr@hotmail.com">
+                            <MdOutlineEmail size={'22px'} color={'#000'} />
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
