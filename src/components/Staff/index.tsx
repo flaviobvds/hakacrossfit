@@ -28,7 +28,7 @@ export function Staff() {
                     </span>
 
                     <div className={styles.social}>
-                        <a href="https://www.instagram.com/neoalmeida/">
+                        <a href="https://www.instagram.com/neoalmeida/" target="_blank">
                             <img
                                 src="/images/icons/instagram.png"
                                 alt="instagram"
@@ -56,7 +56,7 @@ export function Staff() {
                     </span>
 
                     <div className={styles.social}>
-                        <a href="https://www.instagram.com/vivian_ssousa/">
+                        <a href="https://www.instagram.com/vivian_ssousa/" target="_blank">
                             <img
                                 src="/images/icons/instagram.png"
                                 alt="instagram"
@@ -84,7 +84,7 @@ export function Staff() {
                     </span>
 
                     <div className={styles.social}>
-                        <a href="https://www.instagram.com/cassiricardo/">
+                        <a href="https://www.instagram.com/cassiricardo/" target="_blank">
                             <img
                                 src="/images/icons/instagram.png"
                                 alt="instagram"

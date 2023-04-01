@@ -14,7 +14,6 @@
     background-size: cover;
     height: 4.5rem;
     width: 18rem;
-    //margin-top: 3rem;
     display: flex;
     justify-content: center;
 }
@@ -31,7 +30,6 @@
     display: flex;
     justify-content: space-between;
     margin-top: 4rem;
-    //background-color: #2aa00f;
 }
 
 .coachInfo {
@@ -39,7 +37,7 @@
     flex-direction: column;
     color: black;
     text-align: center;
-    padding: 1rem 1.5rem;
+    padding: 1rem 2.5rem;
     border-radius: 10px;
     background-color: rgb(184, 184, 184);
     filter: drop-shadow(3px 3px 10px black);
@@ -49,7 +47,6 @@
     margin-top: 2rem;
     font-size: 1rem;
     font-weight: bold;
-    //color: #2aa00f;
 }
 
 .coachTitle {
@@ -93,7 +90,6 @@
 
 
 .instagram {
-    //display: block;
     height: 20px;
     max-width: 100%;
 }

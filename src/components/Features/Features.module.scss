@@ -1,5 +1,7 @@
 .features {
-    background-color: rgb(226, 226, 226);
+    //background-color: rgb(226, 226, 226);
+    background-image: url('/images/features-bg2.jpg');
+    background-size: cover;
     //background-color: white;
     width: 100%;
 }
@@ -10,7 +12,7 @@
     flex-direction: column;
     max-width: 1200px;
     padding: 0 1rem;
-    background-color: rgb(226, 226, 226);
+    //background-color: rgb(226, 226, 226);
     padding-bottom: 5rem;
 }
 
