@@ -14,6 +14,7 @@ export function LiveInTepequem() {
 
     return (
         <section className={styles.tepequem}>
+            <a className={styles.anchorLiveintepequem} id="liveintepequem" />
             <header className={styles.bgHeaderWhite}>
                 <span className={styles.bgHeaderTitleWhite}>
                     Haka Live in Tepequem

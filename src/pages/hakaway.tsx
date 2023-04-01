@@ -1,4 +1,5 @@
 import { CrossfitAffiliate } from '@/components/CrossfitAffiliate'
+import { Halloween } from '@/components/Halloween'
 import { LiveInTepequem } from '@/components/LiveInTepequem'
 import { Murph } from '@/components/Murph'
 import { Staff } from '@/components/Staff'
@@ -34,11 +35,21 @@ export default function HakaWay() {
                             </p>
 
                             <ul className={styles.featureList}>
-                                <li> CrossFit® Affiliate Box </li>
-                                <li> Murph </li>
-                                <li> Haka Live in Tepequem</li>
-                                <li> Staff certificada CrossFit®</li>
-                                <li> Haka Halloween</li>
+                                <a href='#affiliate'>
+                                    <li> CrossFit® Affiliate Box </li>
+                                </a>
+                                <a href='#murph'>
+                                    <li> Murph </li>
+                                </a>
+                                <a href='#liveintepequem'>
+                                    <li> Haka Live in Tepequem </li>
+                                </a>
+                                <a href='#staff'>
+                                    <li> Staff certificada CrossFit® </li>
+                                </a>
+                                <a href='#halloween'>
+                                    <li> Haka Halloween </li>
+                                </a>
                             </ul>
                         </div>
                     </section>
@@ -47,6 +58,7 @@ export default function HakaWay() {
                     <Murph />
                     <LiveInTepequem />
                     <Staff />
+                    <Halloween />
 
                 </div>
             </div>

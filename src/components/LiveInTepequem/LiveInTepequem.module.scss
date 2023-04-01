@@ -66,11 +66,6 @@
     position: relative;
 }
 
-.coachImage {
-    width: 100%;
-    max-height: 16rem;
-}
-
 
 
 // MOBILE DESIGN: 
@@ -101,5 +96,21 @@
 
     .tepequemVideo {
         margin: 1rem 0;
+    }
+}
+
+// ANCHOR
+
+a.anchorLiveintepequem {
+    position: absolute;
+    margin-top: -12.5rem;
+    visibility: hidden;
+}
+
+@media (max-width: 840px) {
+    a.anchorLiveintepequem {
+        position: absolute;
+        margin-top: -7.5rem;
+        visibility: hidden;
     }
 }

@@ -67,7 +67,7 @@
     border-radius: 50%;
     overflow: hidden;
 
-    > img {
+    >img {
         max-width: 100%;
         display: block;
     }
@@ -87,6 +87,26 @@
         flex-direction: column;
         padding: 0 2rem;
         margin-top: 1rem;
+    }
 
+    .coachInfo {
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+}
+
+// ANCHOR
+
+a.anchorStaff {
+    position: absolute;
+    margin-top: -12.5rem;
+    visibility: hidden;
+}
+
+@media (max-width: 840px) {
+    a.anchorStaff {
+        position: absolute;
+        margin-top: -7.5rem;
+        visibility: hidden;
     }
 }

@@ -3,6 +3,7 @@ import styles from './Staff.module.scss'
 export function Staff() {
     return (
         <section className={styles.staff}>
+            <a className={styles.anchorStaff} id="staff" />
             <header className={styles.bgHeaderBlack}>
                 <span className={styles.bgHeaderTitleBlack}>
                     Staff

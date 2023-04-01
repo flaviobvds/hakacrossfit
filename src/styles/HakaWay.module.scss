@@ -74,14 +74,14 @@
     list-style: none;
     width: 60%;
 
-    >li {
+    li {
         padding: 1rem 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         //border-bottom: 1px solid rgba(42, 160, 15, 0.4);
         cursor: pointer;
     }
 
-    >li:hover {
+    li:hover {
         //background-color: rgba(255,255,255,0.1);
         background-color: rgba(50, 234, 41, 0.2);
         font-weight: bold;

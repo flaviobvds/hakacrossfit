@@ -3,6 +3,7 @@ import styles from './Murph.module.scss'
 export function Murph() {
     return (
         <section className={styles.murph}>
+            <a className={styles.anchorMurph} id="murph" />
             <header className={styles.bgHeaderBlack}>
                 <span className={styles.bgHeaderTitleBlack}>
                     Murph

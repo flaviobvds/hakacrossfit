@@ -111,3 +111,19 @@
         order: -1;
     }
 }
+
+// ANCHOR
+
+a.anchorAffiliate {
+    position: absolute;
+    margin-top: -12.5rem;
+    visibility: hidden;
+}
+
+@media (max-width: 840px) {
+    a.anchorAffiliate {
+        position: absolute;
+        margin-top: -7.5rem;
+        visibility: hidden;
+    }
+}

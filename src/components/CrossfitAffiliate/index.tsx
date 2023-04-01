@@ -3,6 +3,7 @@ import styles from './CrossfitAffiliate.module.scss'
 export function CrossfitAffiliate() {
     return (
         <section className={styles.affiliate}>
+            <a className={styles.anchorAffiliate} id="affiliate" />
             <header className={styles.bgHeaderBlack}>
                 <span className={styles.bgHeaderTitleBlack}>
                     CrossFit® Affiliate
