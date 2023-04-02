@@ -47,14 +47,14 @@ export default function Classes() {
     const stronger = {
         title: 'Stronger',
         description: 'Treino de movimentos acessórios para te preparar para o dia a dia',
-        image: '/images/lpo-class.jpg',
+        image: '/images/stronger-class.jpg',
         times: {
-            'mon': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'],
-            'tue': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00'],
-            'wed': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'],
-            'thu': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'],
-            'fri': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00'],
-            'sat': ['09:00'],
+            'mon': [],
+            'tue': [],
+            'wed': [],
+            'thu': [],
+            'fri': ['21:00'],
+            'sat': [],
             'sun': []
         },
     }
@@ -62,7 +62,7 @@ export default function Classes() {
     const openGym = {
         title: 'Open Gym',
         description: 'A academia disponível para você praticar o tipo de treino que preferir.',
-        image: '/images/lpo-class.jpg',
+        image: '/images/opengym.jpg',
         times: {
             'mon': [],
             'tue': [],

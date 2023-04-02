@@ -59,7 +59,7 @@ export function WorkoutCard({ cardInfo, onScheduleTime }: WorkoutCardProps) {
                         })}
                 </div>
 
-                <span className={styles.day}>Wed</span>
+                <span className={styles.day}>Qua</span>
                 <div className={styles.times}>
                     {(cardInfo.times.wed.length == 0) ?
                         <span className={styles.noTime}>-</span>
@@ -71,7 +71,7 @@ export function WorkoutCard({ cardInfo, onScheduleTime }: WorkoutCardProps) {
                         })}
                 </div>
 
-                <span className={styles.day}>Thu</span>
+                <span className={styles.day}>Qui</span>
                 <div className={styles.times}>
                     {(cardInfo.times.thu.length == 0) ?
                         <span className={styles.noTime}>-</span>
@@ -83,7 +83,7 @@ export function WorkoutCard({ cardInfo, onScheduleTime }: WorkoutCardProps) {
                         })}
                 </div>
 
-                <span className={styles.day}>Fri</span>
+                <span className={styles.day}>Sex</span>
                 <div className={styles.times}>
                     {(cardInfo.times.fri.length == 0) ?
                         <span className={styles.noTime}>-</span>
@@ -95,7 +95,7 @@ export function WorkoutCard({ cardInfo, onScheduleTime }: WorkoutCardProps) {
                         })}
                 </div>
 
-                <span className={styles.day}>Sat</span>
+                <span className={styles.day}>Sáb</span>
                 <div className={styles.times}>
                     {(cardInfo.times.sat.length == 0) ?
                         <span className={styles.noTime}>-</span>
