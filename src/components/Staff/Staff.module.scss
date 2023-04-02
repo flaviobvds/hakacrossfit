@@ -41,6 +41,11 @@
     border-radius: 10px;
     background-color: rgb(184, 184, 184);
     filter: drop-shadow(3px 3px 10px black);
+    cursor: pointer;
+}
+
+.coachInfo:hover {
+    transform: translateY(-1rem);
 }
 
 .coachName {

@@ -1,7 +1,14 @@
 import style from './Title.module.scss'
 
 export function Title() {
-    
+
+    function handleMainButton() {
+        window.open(
+            'https://api.whatsapp.com/send?phone=5595991245752&text=Ol%C3%A1.%20Gostaria%20de%20marcar%20uma%20aula%20experimental%20gratuita.',
+            '_blank'
+        )
+    }
+
     return (
         <main className={style.main}>
 
@@ -17,12 +24,7 @@ export function Title() {
                     <button
                         className={style.mainButton}
                         type='button'
-                        onClick={() => {
-                            window.open(
-                                'https://api.whatsapp.com/send?phone=5595991245752&text=Ol%C3%A1.%20Gostaria%20de%20marcar%20uma%20aula%20experimental%20gratuita.',
-                                '_blank'
-                             )
-                        }}
+                        onClick={handleMainButton}
                     >
                         Comece hoje
                     </button>
