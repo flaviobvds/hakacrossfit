@@ -4,8 +4,7 @@ import Head from 'next/head'
 import { Title } from '@/components/Title'
 import { Features } from '@/components/Features'
 import { Staff } from '@/components/Staff'
-import Classes from './classes'
-import Workouts from '@/components/Workouts'
+import { Workouts } from '@/components/Workouts'
 
 
 export default function Home() {

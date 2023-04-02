@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import styles from './Workouts.module.scss'
 
 
-export default function Workouts() {
+export function Workouts() {
     const [selectedWorkout, setSelectedWorkoout] = useState('');
 
     function onScheduleTime(workout: string) {
@@ -31,7 +31,7 @@ export default function Workouts() {
 
     const lpo = {
         title: 'LPO',
-        description: 'Evolua seus músculo e melhore sua força praticando o LPO (Levantamento de Peso Olímpico).',
+        description: 'Evolua seus músculos e melhore sua força praticando o LPO (Levantamento de Peso Olímpico).',
         image: '/images/lpo-class.jpg',
         times: {
             'mon': [],

@@ -33,3 +33,18 @@
     font-weight: bold;
     font-size: 2rem;
 }
+
+// MOBILE DESIGN
+
+@media (max-width: 840px) {
+    .bgHeaderWhite {
+        height: 4.5rem;
+        width: 18rem;
+        margin-left: .5rem;
+    }
+    
+    .bgHeaderTitleWhite {
+        margin-top: 1rem;
+        font-size: 1.7rem;
+    }
+}
