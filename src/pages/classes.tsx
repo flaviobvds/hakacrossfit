@@ -1,7 +1,79 @@
+import { WorkoutCard } from '@/components/WorkoutCard';
+import { useEffect, useState } from 'react';
 import styles from '../styles/Classes.module.scss'
 
 
 export default function Classes() {
+    const [selectedWorkout, setSelectedWorkoout] = useState('');
+
+    function onScheduleTime(workout: string) {
+        setSelectedWorkoout(workout);
+    }
+
+    useEffect(() => {
+        // run function to schedule time
+    }, [selectedWorkout])
+
+    const crossfit = {
+        title: 'CrossFit',
+        description: 'Desenvolva altos níveis de condicionamento físico com exercícios variados e de elevada intensidade.',
+        image: '/images/crossfit-class.jpg',
+        times: {
+            'mon': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'],
+            'tue': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00'],
+            'wed': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'],
+            'thu': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'],
+            'fri': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00'],
+            'sat': ['09:00'],
+            'sun': []
+        },
+    }
+
+    const lpo = {
+        title: 'LPO',
+        description: 'Evolua seus músculo e melhore sua força praticando o LPO (Levantamento de Peso Olímpico).',
+        image: '/images/lpo-class.jpg',
+        times: {
+            'mon': [],
+            'tue': ['21:00'],
+            'wed': [],
+            'thu': [],
+            'fri': [],
+            'sat': ['10:00'],
+            'sun': []
+        },
+    }
+
+    const stronger = {
+        title: 'Stronger',
+        description: 'Treino de movimentos acessórios para te preparar para o dia a dia',
+        image: '/images/lpo-class.jpg',
+        times: {
+            'mon': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'],
+            'tue': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00'],
+            'wed': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'],
+            'thu': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'],
+            'fri': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00'],
+            'sat': ['09:00'],
+            'sun': []
+        },
+    }
+
+    const openGym = {
+        title: 'Open Gym',
+        description: 'A academia disponível para você praticar o tipo de treino que preferir.',
+        image: '/images/lpo-class.jpg',
+        times: {
+            'mon': [],
+            'tue': [],
+            'wed': [],
+            'thu': [],
+            'fri': [],
+            'sat': ['11:00', '12:00'],
+            'sun': []
+        },
+    }
+    
     return (
         <>
             <div className={styles.main}>
@@ -20,221 +92,10 @@ export default function Classes() {
                         </h1>
 
                         <div className={styles.cards}>
-                            <div className={styles.card}>
-                                <div className={styles.cardImg}>
-                                    <img
-                                        src="/images/crossfit-class.jpg"
-                                        alt="crossfit"
-                                    />
-                                </div>
-                                <span className={styles.cardTitle}> CrossFit </span>
-                                <p className={styles.cardDescription}>
-                                    Desenvolva altos níveis de condicionamento físico com
-                                    exercícios variados e de elevada intensidade.
-                                </p>
-                                <span className={styles.timesTitle}> Horários </span>
-
-                                <div className={styles.timeTable}>
-                                    <span className={styles.day}>Seg</span>
-                                    <div className={styles.times}>
-                                        <span className={styles.time}>06:00</span>
-                                        <span className={styles.time}>07:00</span>
-                                        <span className={styles.time}>08:00</span>
-                                        <span className={styles.time}>16:00</span>
-                                        <span className={styles.time}>17:00</span>
-                                        <span className={styles.time}>18:00</span>
-                                        <span className={styles.time}>19:00</span>
-                                        <span className={styles.time}>20:00</span>
-                                        <span className={styles.time}>21:00</span>
-                                    </div>
-
-                                    <span className={styles.day}>Ter</span>
-                                    <div className={styles.times}>
-                                        <span className={styles.time}>06:00</span>
-                                        <span className={styles.time}>07:00</span>
-                                        <span className={styles.time}>08:00</span>
-                                        <span className={styles.time}>16:00</span>
-                                        <span className={styles.time}>17:00</span>
-                                        <span className={styles.time}>18:00</span>
-                                        <span className={styles.time}>19:00</span>
-                                        <span className={styles.time}>20:00</span>
-                                    </div>
-
-                                    <span className={styles.day}>Qua</span>
-                                    <div className={styles.times}>
-                                        <span className={styles.time}>06:00</span>
-                                        <span className={styles.time}>07:00</span>
-                                        <span className={styles.time}>08:00</span>
-                                        <span className={styles.time}>16:00</span>
-                                        <span className={styles.time}>17:00</span>
-                                        <span className={styles.time}>18:00</span>
-                                        <span className={styles.time}>19:00</span>
-                                        <span className={styles.time}>20:00</span>
-                                        <span className={styles.time}>21:00</span>
-                                    </div>
-
-                                    <span className={styles.day}>Qui</span>
-                                    <div className={styles.times}>
-                                        <span className={styles.time}>06:00</span>
-                                        <span className={styles.time}>07:00</span>
-                                        <span className={styles.time}>08:00</span>
-                                        <span className={styles.time}>16:00</span>
-                                        <span className={styles.time}>17:00</span>
-                                        <span className={styles.time}>18:00</span>
-                                        <span className={styles.time}>19:00</span>
-                                        <span className={styles.time}>20:00</span>
-                                        <span className={styles.time}>21:00</span>
-                                    </div>
-
-                                    <span className={styles.day}>Sex</span>
-                                    <div className={styles.times}>
-                                        <span className={styles.time}>06:00</span>
-                                        <span className={styles.time}>07:00</span>
-                                        <span className={styles.time}>08:00</span>
-                                        <span className={styles.time}>16:00</span>
-                                        <span className={styles.time}>17:00</span>
-                                        <span className={styles.time}>18:00</span>
-                                        <span className={styles.time}>19:00</span>
-                                        <span className={styles.time}>20:00</span>
-                                    </div>
-
-                                    <span className={styles.day}>Sáb</span>
-                                    <div className={styles.times}>
-                                        <span className={styles.time}>9:00</span>
-                                    </div>
-
-                                    <span className={styles.day}>Dom</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                </div>
-                            </div>
-
-                            <div className={styles.card}>
-                                <div className={styles.cardImg}>
-                                    <img
-                                        src="/images/lpo-class.jpg"
-                                        alt="crossfit"
-                                    />
-                                </div>
-                                <span className={styles.cardTitle}>LPO</span>
-                                <p className={styles.cardDescription}>
-                                    Desenvolva altos níveis de condicionamento físico com
-                                    exercícios variados e de elevada intensidade.
-                                </p>
-                                <span className={styles.timesTitle}> Horários </span>
-
-                                <div className={styles.timeTable}>
-                                    <span className={styles.day}>Seg</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                    <span className={styles.day}>Ter</span>
-                                    <div className={styles.times}>
-                                        <span className={styles.time}>21:00</span>
-                                    </div>
-
-                                    <span className={styles.day}>Qua</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                    <span className={styles.day}>Qui</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                    <span className={styles.day}>Sex</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                    <span className={styles.day}>Sáb</span>
-                                    <div className={styles.times}>
-                                        <span className={styles.time}>10:00</span>
-                                    </div>
-
-                                    <span className={styles.day}>Dom</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                </div>
-                            </div>
-
-                            <div className={styles.card}>
-                                <div className={styles.cardImg}>
-                                    <img
-                                        src="/images/lpo-class.jpg"
-                                        alt="crossfit"
-                                    />
-                                </div>
-                                <span className={styles.cardTitle}>Stronger</span>
-                                <p className={styles.cardDescription}>
-                                    Desenvolva altos níveis de condicionamento físico com
-                                    exercícios variados e de elevada intensidade.
-                                </p>
-                                <span className={styles.timesTitle}> Horários </span>
-
-                                <div className={styles.timeTable}>
-                                    <span className={styles.day}>Seg</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                    <span className={styles.day}>Ter</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                    <span className={styles.day}>Qua</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                    <span className={styles.day}>Qui</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                    <span className={styles.day}>Sex</span>
-                                    <div className={styles.times}>
-                                        <span className={styles.time}>21:00</span>
-                                    </div>
-
-                                    <span className={styles.day}>Sáb</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                    <span className={styles.day}>Dom</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                </div>
-                            </div>
-
-                            <div className={styles.card}>
-                                <div className={styles.cardImg}>
-                                    <img
-                                        src="/images/lpo-class.jpg"
-                                        alt="crossfit"
-                                    />
-                                </div>
-                                <span className={styles.cardTitle}> Open Gym</span>
-                                <p className={styles.cardDescription}>
-                                    Desenvolva altos níveis de condicionamento físico com
-                                    exercícios variados e de elevada intensidade.
-                                </p>
-                                <span className={styles.timesTitle}> Horários </span>
-
-                                <div className={styles.timeTable}>
-                                    <span className={styles.day}>Seg</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                    <span className={styles.day}>Ter</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                    <span className={styles.day}>Qua</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                    <span className={styles.day}>Qui</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                    <span className={styles.day}>Sex</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                    <span className={styles.day}>Sáb</span>
-                                    <div className={styles.times}>
-                                        <span className={styles.time}>11:00</span>
-                                        <span className={styles.time}>12:00</span>
-                                    </div>
-
-                                    <span className={styles.day}>Dom</span>
-                                    <span className={styles.noTime}>-</span>
-
-                                </div>
-                            </div>
-
+                            <WorkoutCard cardInfo={crossfit} onScheduleTime={onScheduleTime}/>
+                            <WorkoutCard cardInfo={lpo} onScheduleTime={onScheduleTime}/>
+                            <WorkoutCard cardInfo={stronger} onScheduleTime={onScheduleTime}/>
+                            <WorkoutCard cardInfo={openGym} onScheduleTime={onScheduleTime}/>
                         </div>
                     </div>
                 </section>
