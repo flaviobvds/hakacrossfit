@@ -4,6 +4,8 @@ import Head from 'next/head'
 import { Title } from '@/components/Title'
 import { Features } from '@/components/Features'
 import { Staff } from '@/components/Staff'
+import Classes from './classes'
+import Workouts from '@/components/Workouts'
 
 
 export default function Home() {
@@ -11,6 +13,7 @@ export default function Home() {
         <>
             <Title />
             <Features />
+            <Workouts />
             <Staff />
         </>
     )

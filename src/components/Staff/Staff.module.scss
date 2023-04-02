@@ -44,10 +44,6 @@
     cursor: pointer;
 }
 
-.coachInfo:hover {
-    transform: translateY(-1rem);
-}
-
 .coachName {
     margin-top: 2rem;
     font-size: 1rem;
@@ -99,6 +95,14 @@
     max-width: 100%;
 }
 
+
+// DESKTOP-ONLY FEATURE
+
+@media (min-width: 841px) {
+    .coachInfo:hover {
+        transform: translateY(-1rem);
+    }
+}
 
 
 // MOBILE DESIGN
