@@ -1,11 +1,11 @@
 import { WorkoutCard } from '@/components/WorkoutCard';
-import Workouts from '@/components/Workouts';
+import { Workouts } from '@/components/Workouts';
 import { useEffect, useState } from 'react';
 import styles from '../styles/Classes.module.scss'
 
 
 export default function Classes() {
-        
+
     return (
         <>
             <div className={styles.main}>
@@ -17,7 +17,7 @@ export default function Classes() {
                     </header>
                 </section>
 
-               <Workouts />
+                <Workouts />
 
             </div>
         </>
