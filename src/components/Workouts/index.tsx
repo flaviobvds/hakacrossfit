@@ -1,18 +1,27 @@
 import { WorkoutCard } from '@/components/WorkoutCard';
 import { useEffect, useState } from 'react';
+import { ScheduleModal } from '../ScheduleModal';
 import styles from './Workouts.module.scss'
 
 
 export function Workouts() {
     const [selectedWorkout, setSelectedWorkoout] = useState('');
+    const [scheduleModalOpen, setScheduleModalOpen] = useState(false);
+    const [clickedSchedule, setClickedSchedule] = useState(false);
 
-    function onScheduleTime(workout: string) {
+    function handleScheduleTime(workout: string) {
         setSelectedWorkoout(workout);
     }
 
+    function onClickSchedule() {
+        setClickedSchedule(!clickedSchedule)
+    }
+
     useEffect(() => {
-        // run function to schedule time
-    }, [selectedWorkout])
+        if (selectedWorkout !== '') {
+            setScheduleModalOpen(true);
+        }
+    }, [clickedSchedule])
 
     const crossfit = {
         title: 'CrossFit',
@@ -75,19 +84,44 @@ export function Workouts() {
     }
 
     return (
-        <section className={styles.classes}>
-            <div className={styles.classesContent}>
-                <h1 className={styles.title}>
-                    Escolha seu treino:
-                </h1>
 
-                <div className={styles.cards}>
-                    <WorkoutCard cardInfo={crossfit} onScheduleTime={onScheduleTime} />
-                    <WorkoutCard cardInfo={lpo} onScheduleTime={onScheduleTime} />
-                    <WorkoutCard cardInfo={stronger} onScheduleTime={onScheduleTime} />
-                    <WorkoutCard cardInfo={openGym} onScheduleTime={onScheduleTime} />
+        <>
+            <section className={styles.classes}>
+                <div className={styles.classesContent}>
+                    <h1 className={styles.title}>
+                        Escolha seu treino:
+                    </h1>
+
+                    <div className={styles.cards}>
+                        <WorkoutCard 
+                            cardInfo={crossfit} 
+                            onChangeScheduleTime={handleScheduleTime} 
+                            onClickSchedule={onClickSchedule} 
+                        />
+                        <WorkoutCard 
+                            cardInfo={lpo} 
+                            onChangeScheduleTime={handleScheduleTime} 
+                            onClickSchedule={onClickSchedule}/>
+                        <WorkoutCard 
+                            cardInfo={stronger} 
+                            onChangeScheduleTime={handleScheduleTime} 
+                            onClickSchedule={onClickSchedule}
+                        />
+                        <WorkoutCard 
+                            cardInfo={openGym} 
+                            onChangeScheduleTime={handleScheduleTime} 
+                            onClickSchedule={onClickSchedule}
+                        />
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <ScheduleModal
+                isOpen={scheduleModalOpen}
+                setIsScheduleModalOpen={setScheduleModalOpen}
+                workout={selectedWorkout}
+            />
+
+        </>
     );
 }

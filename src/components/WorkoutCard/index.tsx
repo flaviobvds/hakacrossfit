@@ -15,10 +15,11 @@ interface WorkoutCardProps {
             sun: string[],
         }
     },
-    onScheduleTime: (workout: string) => void;
+    onChangeScheduleTime: (workout: string) => void;
+    onClickSchedule: () => void;
 }
 
-export function WorkoutCard({ cardInfo, onScheduleTime }: WorkoutCardProps) {
+export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }: WorkoutCardProps) {
     return (
         <div className={styles.card}>
             <div className={styles.cardImg}>
@@ -122,7 +123,10 @@ export function WorkoutCard({ cardInfo, onScheduleTime }: WorkoutCardProps) {
 
             <button 
                 className={styles.scheduleButton}
-                onClick={() => {onScheduleTime(cardInfo.title)}}
+                onClick={() => {
+                    onChangeScheduleTime(cardInfo.title)
+                    onClickSchedule();
+                }}
             >
                 Agende um Horário
             </button>

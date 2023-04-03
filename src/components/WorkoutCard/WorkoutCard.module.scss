@@ -64,7 +64,6 @@
 }
 
 .times {
-    
     display: grid;
     grid-template-columns: repeat(auto-fit, 1.85rem);
     row-gap: 5px;
@@ -96,6 +95,7 @@
     margin: auto .5rem;
     text-align: left;
     width: 100%;
+    color: white;
 }
 
 .scheduleButton {
