@@ -31,11 +31,20 @@ export function ScheduleModal({ isOpen, setIsScheduleModalOpen, workout }: Sched
             />
 
             <h1 className={styles.title}>
-                {workout}
+                Aula Experimental
             </h1>
 
-            <CustomDatePicker />
-            
+            <p className={styles.parag}>
+                Oferecemos aulas experimentais gratuitas.
+                Escolha a data e o horário de seu interesse e venha nos conhecer.
+            </p>
+
+            <div className={styles.selectors}>
+                <CustomDatePicker />
+
+                
+            </div>
+
 
         </Modal>
     )

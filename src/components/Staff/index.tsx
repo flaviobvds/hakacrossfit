@@ -35,7 +35,7 @@ export function Staff() {
                                 className={styles.instagram}
                             />
                         </a>
-                        <a href="mailto:mailto:neozitojr@hotmail.com">
+                        <a href="mailto:neozitojr@hotmail.com">
                             <MdOutlineEmail size={'22px'} color={'#000'} />
                         </a>
                     </div>
@@ -63,7 +63,7 @@ export function Staff() {
                                 className={styles.instagram}
                             />
                         </a>
-                        <a href="mailto:mailto:neozitojr@hotmail.com">
+                        <a href="mailto:neozitojr@hotmail.com">
                             <MdOutlineEmail size={'22px'} color={'#000'} />
                         </a>
                     </div>
@@ -91,7 +91,7 @@ export function Staff() {
                                 className={styles.instagram}
                             />
                         </a>
-                        <a href="mailto:mailto:neozitojr@hotmail.com">
+                        <a href="mailto:neozitojr@hotmail.com">
                             <MdOutlineEmail size={'22px'} color={'#000'} />
                         </a>
                     </div>

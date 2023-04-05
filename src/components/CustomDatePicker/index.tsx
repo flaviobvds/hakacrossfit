@@ -1,10 +1,13 @@
 import DatePicker from "react-datepicker";
 import React, { useState } from 'react';
+import { registerLocale, setDefaultLocale } from  "react-datepicker";
+import pt from 'date-fns/locale/pt';
 
 import styles from './CustomDatePicker.module.scss'
 
 export function CustomDatePicker() {
 
+    registerLocale('pt', pt)
     const [startDate, setStartDate] = useState<Date | null>(null);
 
     const addDays = (date: Date, days: number): Date => {
@@ -23,6 +26,8 @@ export function CustomDatePicker() {
 
     return (
         <DatePicker
+            locale="pt"
+            dateFormat="dd/MM/yyyy"
             selected={startDate}
             onChange={(date) => setStartDate(date)}
             placeholderText="Escolha uma data"

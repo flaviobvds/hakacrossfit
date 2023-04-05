@@ -10,9 +10,6 @@
     justify-content: center;
 }
 
-
-
-
 .modalContent {
     background: whitesmoke;
     width: 90%;
@@ -20,12 +17,6 @@
     padding: 3rem;
     position: relative;
     border-radius: 0.25rem;
-
-    p {
-        margin-top: 1.5rem;
-        font-size: 1rem;
-        text-align: center;
-    }
 
     &:focus {
         outline: none;
@@ -51,9 +42,20 @@
 .title {
     font-size: 2rem;
     width: 100%;
-    background-color: #3152e2;
+    background-color: #145a04;
+    padding: .25rem 0;
     border-radius: 5px;
     color: white;
     text-align: center;
     margin-bottom: 2.5rem;
+}
+
+.parag {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.selectors {
+    display: flex;
+    justify-content: space-between;
 }
