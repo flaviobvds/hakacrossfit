@@ -14,7 +14,7 @@
     background: whitesmoke;
     width: 90%;
     max-width: 576px;
-    padding: 3rem;
+    padding: 1.5rem;
     position: relative;
     border-radius: 0.25rem;
 
@@ -25,8 +25,8 @@
 
 .modalClose {
     position: absolute;
-    right: 1.5rem;
-    top: 1.5rem;
+    right: 1rem;
+    top: 1rem;
     border: 0;
     background: transparent;
     color: rgba(0, 0, 0, 0.7);
@@ -58,4 +58,69 @@
 .selectors {
     display: flex;
     justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.input {
+    border-radius: 5px;
+    border: 1px solid #2aa00f;
+    padding: .5rem;
+    text-align: center;
+    width: 12rem;
+    cursor: pointer;
+}
+
+.timeInput {
+    select:required:invalid {
+        color: gray;
+    }
+
+    option[value=""][disabled] {
+        display: none;
+        color: gray;
+    }
+
+    option {
+        color: black;
+        text-align: center;
+    }
+}
+
+.timeInput:required:invalid {
+    color: gray;
+}
+
+.scheduleButton {
+    background-color: #145a04;
+    color: white;
+    padding: .5rem 3rem;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    margin: 1.5rem auto 1rem auto;
+}
+
+
+// MOBILE DESIGN:
+
+@media (max-width: 840px) {
+    .selectors {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .input {
+        width: 100%;
+        margin: .25rem 0;
+    }
+
+    .dateContainer {
+        width: 100%;
+        margin: .25rem 0;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
 }

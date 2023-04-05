@@ -35,15 +35,39 @@ export function ScheduleModal({ isOpen, setIsScheduleModalOpen, workout }: Sched
             </h1>
 
             <p className={styles.parag}>
-                Oferecemos aulas experimentais gratuitas.
+                Marque sua aula experimental gratuita.<br />
                 Escolha a data e o horário de seu interesse e venha nos conhecer.
             </p>
 
-            <div className={styles.selectors}>
-                <CustomDatePicker />
+            <form className={styles.selectors}>
 
-                
-            </div>
+                <input
+                    className={`${styles.nameInput} ${styles.input}`}
+                    placeholder='Nome'
+                />
+
+                <input
+                    className={`${styles.emailInput} ${styles.input}`}
+                    placeholder='Email'
+                />
+
+                <div className={`${styles.dateContainer}`}>
+                    <CustomDatePicker />
+                </div>
+
+                <select required className={`${styles.timeInput} ${styles.input}`}>
+                    <option value="" disabled selected>Escolha um horário</option>
+                    <option value="0800">08:00</option>
+                    <option value="0900">09:00</option>
+                </select>
+            </form>
+
+            <button
+                type='submit'
+                className={styles.scheduleButton}
+            >
+                Agendar Aula
+            </button>
 
 
         </Modal>
