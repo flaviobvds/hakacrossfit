@@ -57,8 +57,12 @@ export function ScheduleModal({ isOpen, setIsScheduleModalOpen, workout }: Sched
 
                 <select required className={`${styles.timeInput} ${styles.input}`}>
                     <option value="" disabled selected>Escolha um horário</option>
+                    <option value="0600">06:00</option>
+                    <option value="0700">07:00</option>
                     <option value="0800">08:00</option>
                     <option value="0900">09:00</option>
+                    <option value="1600">16:00</option>
+                    <option value="1700">17:00</option>
                 </select>
             </form>
 
