@@ -52,7 +52,7 @@ export function Staff() {
                         Head Coach
                     </span>
                     <span className={styles.coachCertification}>
-                        CrossFit® Level One
+                        CrossFit® Level Two
                     </span>
 
                     <div className={styles.social}>
@@ -80,7 +80,7 @@ export function Staff() {
                         Coach
                     </span>
                     <span className={styles.coachCertification}>
-                        CrossFit® Level One
+                        &nbsp;
                     </span>
 
                     <div className={styles.social}>

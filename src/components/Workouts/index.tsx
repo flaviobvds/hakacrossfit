@@ -26,7 +26,7 @@ export function Workouts() {
     const crossfit = {
         title: 'CrossFit',
         description: 'Desenvolva altos níveis de condicionamento físico com exercícios variados e de elevada intensidade.',
-        image: '/images/crossfit-class.jpg',
+        image: '/images/crossfit-class-sm.jpg',
         times: {
             'mon': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'],
             'tue': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00'],
@@ -41,7 +41,7 @@ export function Workouts() {
     const lpo = {
         title: 'LPO',
         description: 'Evolua seus músculos e melhore sua força praticando o LPO (Levantamento de Peso Olímpico).',
-        image: '/images/lpo-class.jpg',
+        image: '/images/lpo-class-sm.jpg',
         times: {
             'mon': [],
             'tue': ['21:00'],
@@ -56,7 +56,7 @@ export function Workouts() {
     const stronger = {
         title: 'Stronger',
         description: 'Treino de movimentos acessórios para te preparar para o dia a dia',
-        image: '/images/stronger-class.jpg',
+        image: '/images/stronger-class-sm.jpg',
         times: {
             'mon': [],
             'tue': [],
@@ -71,14 +71,14 @@ export function Workouts() {
     const openGym = {
         title: 'Open Gym',
         description: 'A academia disponível para você praticar o tipo de treino que preferir.',
-        image: '/images/opengym.jpg',
+        image: '/images/opengym-sm.jpg',
         times: {
             'mon': [],
             'tue': [],
             'wed': [],
             'thu': [],
             'fri': [],
-            'sat': ['11:00', '12:00'],
+            'sat': ['11:00'],
             'sun': []
         },
     }
