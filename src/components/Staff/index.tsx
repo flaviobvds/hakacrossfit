@@ -15,7 +15,7 @@ export function Staff() {
             <div className={styles.staffContent}>
                 <div className={styles.coachInfo}>
                     <div className={styles.roundImg}>
-                        <img src="/images/neozito2.jpg" alt="coach1" />
+                        <img src="/images/neozito-sm.jpg" alt="coach1" />
                     </div>
                     <span className={styles.coachName}>
                         Neo Almeida
@@ -43,7 +43,7 @@ export function Staff() {
 
                 <div className={styles.coachInfo}>
                     <div className={styles.roundImg}>
-                        <img src="/images/vivi2.jpg" alt="coach2" />
+                        <img src="/images/vivi-sm.jpg" alt="coach2" />
                     </div>
                     <span className={styles.coachName}>
                         Vivi Sousa

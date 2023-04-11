@@ -4,6 +4,7 @@ import { FaTimes as CloseButton } from 'react-icons/fa'
 import styles from './ScheduleModal.module.scss'
 import "react-datepicker/dist/react-datepicker.css";
 import { CustomDatePicker } from '../CustomDatePicker';
+import { FormEvent, useState } from 'react';
 
 interface ScheduleModalProps {
     isOpen: boolean;
@@ -17,6 +18,18 @@ Modal.setAppElement('body');
 export function ScheduleModal({ isOpen, setIsScheduleModalOpen, workout }: ScheduleModalProps) {
 
     console.log(isOpen);
+    
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [date, setDate] = useState<Date | String>('')
+    const [time, setTime] = useState('')
+
+    function handleSubmitForm() {
+        console.log(name)
+        console.log(email)
+        console.log(date)
+        console.log(time)
+    }
 
     return (
         <Modal
@@ -44,18 +57,24 @@ export function ScheduleModal({ isOpen, setIsScheduleModalOpen, workout }: Sched
                 <input
                     className={`${styles.nameInput} ${styles.input}`}
                     placeholder='Nome'
+                    onChange={(e) => setName(e.target.value)}
                 />
 
                 <input
                     className={`${styles.emailInput} ${styles.input}`}
                     placeholder='Email'
+                    onChange={(e) => setEmail(e.target.value)}
                 />
 
                 <div className={`${styles.dateContainer}`}>
                     <CustomDatePicker />
                 </div>
 
-                <select required className={`${styles.timeInput} ${styles.input}`}>
+                <select 
+                    required 
+                    className={`${styles.timeInput} ${styles.input}`}
+                    onChange={(e) => {setTime(e.target.value)}}
+                >
                     <option value="" disabled selected>Escolha um horário</option>
                     <option value="0600">06:00</option>
                     <option value="0700">07:00</option>
@@ -69,6 +88,7 @@ export function ScheduleModal({ isOpen, setIsScheduleModalOpen, workout }: Sched
             <button
                 type='submit'
                 className={styles.scheduleButton}
+                onClick={handleSubmitForm}
             >
                 Agendar Aula
             </button>
