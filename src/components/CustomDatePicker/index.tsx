@@ -5,7 +5,11 @@ import pt from 'date-fns/locale/pt';
 
 import styles from './CustomDatePicker.module.scss'
 
-export function CustomDatePicker() {
+interface CustomDatePickerProps {
+    setDate: (value: Date | null) => void;
+}
+
+export function CustomDatePicker({setDate}: CustomDatePickerProps) {
 
     registerLocale('pt', pt)
     const [startDate, setStartDate] = useState<Date | null>(null);
@@ -29,7 +33,10 @@ export function CustomDatePicker() {
             locale="pt"
             dateFormat="dd/MM/yyyy"
             selected={startDate}
-            onChange={(date) => setStartDate(date)}
+            onChange={(date) => {
+                setStartDate(date)
+                setDate(date)
+            }}
             placeholderText="Escolha uma data"
             minDate={new Date()}
             maxDate={addDays(new Date(), 30)}

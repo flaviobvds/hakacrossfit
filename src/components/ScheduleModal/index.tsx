@@ -1,5 +1,6 @@
 import Modal from 'react-modal';
 import { FaTimes as CloseButton } from 'react-icons/fa'
+import { api } from "@/services/api";
 
 import styles from './ScheduleModal.module.scss'
 import "react-datepicker/dist/react-datepicker.css";
@@ -16,19 +17,38 @@ Modal.setAppElement('body');
 
 
 export function ScheduleModal({ isOpen, setIsScheduleModalOpen, workout }: ScheduleModalProps) {
-
-    console.log(isOpen);
     
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
-    const [date, setDate] = useState<Date | String>('')
+    const [date, setDate] = useState<Date | null>(null)
     const [time, setTime] = useState('')
+    const [status, setStatus] = useState('')
 
-    function handleSubmitForm() {
-        console.log(name)
-        console.log(email)
-        console.log(date)
-        console.log(time)
+    function validateEmail(emailAdress: string) {
+        const regex = /\S+@\S+\.\S+/;
+        return regex.test(emailAdress);
+    }
+
+    async function handleSubmitForm(e: FormEvent) {
+        
+        e.preventDefault();
+        const isValidEmail = (validateEmail(email));
+        
+        if (email && isValidEmail) {
+            setStatus('loading');
+            try {
+                await api.post('/addCalendarEvent', {
+                    name,
+                    email,
+                    date,
+                    time
+                })
+                setStatus('success');
+            }
+            catch(err) {
+                setStatus('failed');
+            }
+        }
     }
 
     return (
@@ -67,7 +87,7 @@ export function ScheduleModal({ isOpen, setIsScheduleModalOpen, workout }: Sched
                 />
 
                 <div className={`${styles.dateContainer}`}>
-                    <CustomDatePicker />
+                    <CustomDatePicker setDate={setDate}/>
                 </div>
 
                 <select 
