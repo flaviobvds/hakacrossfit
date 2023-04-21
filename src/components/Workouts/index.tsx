@@ -119,7 +119,6 @@ export function Workouts() {
             <ScheduleModal
                 isOpen={scheduleModalOpen}
                 setIsScheduleModalOpen={setScheduleModalOpen}
-                workout={selectedWorkout}
             />
 
         </>

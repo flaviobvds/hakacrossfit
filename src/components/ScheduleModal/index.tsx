@@ -1,27 +1,23 @@
 import Modal from 'react-modal';
+import { FormEvent, useState } from 'react';
 import { FaTimes as CloseButton } from 'react-icons/fa'
 import { api } from "@/services/api";
 
 import styles from './ScheduleModal.module.scss'
 import "react-datepicker/dist/react-datepicker.css";
-import { CustomDatePicker } from '../CustomDatePicker';
-import { FormEvent, useState } from 'react';
-import { ScheduleForm } from '../ScheduleForm';
-import { LoadingScreen } from '../LoadingScreen';
-import { SuccessScreen } from '../SuccessScreen';
-import { ErrorScreen } from '../ErrorScreen';
+
 import { ScheduleAttempt } from '../ScheduleAttempt';
+
 
 interface ScheduleModalProps {
     isOpen: boolean;
     setIsScheduleModalOpen: (state: boolean) => void;
-    workout: string;
 }
 
 Modal.setAppElement('body');
 
 
-export function ScheduleModal({ isOpen, setIsScheduleModalOpen, workout }: ScheduleModalProps) {
+export function ScheduleModal({ isOpen, setIsScheduleModalOpen }: ScheduleModalProps) {
     
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')

@@ -1,26 +1,29 @@
 import { FaCheck } from 'react-icons/fa'
+import styles from './SuccessScreen.module.scss'
 
 interface SuccessScreenProps {
     email: string
 }
 
-export function SuccessScreen({email}: SuccessScreenProps) {
+export function SuccessScreen({ email }: SuccessScreenProps) {
     return (
-        <div className='flex flex-col items-center justify-center'>
-            <FaCheck 
+        <div className={styles.content}>
+            <FaCheck
                 size='80'
-                color='#B91C1C'
+                color='#145a04'
             />
 
-            <h2 className='mt-4 text-center'>
-                <span className='text-red-700 font-bold'>
-                    Success!
-                </span> <br/>
+            <div className={styles.text}>
+                <div className={styles.success}>
+                    Sucesso!
+                </div>
 
-                We sent a confirmation email to <span className='text-red-700'>{email}</span> <br/>
-                If you can't find it, check your spam folder.
+                <div className={styles.par}>
+                    Enviamos um email de confirmação para <span className={styles.email}>{email}</span> <br />
+                    Se você não encontrar, verifique na sua página de Spam.
+                </div>
 
-            </h2>
+            </div>
         </div>
     )
 }
