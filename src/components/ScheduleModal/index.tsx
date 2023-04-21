@@ -37,7 +37,7 @@ export function ScheduleModal({ isOpen, setIsScheduleModalOpen, workout }: Sched
         if (email && isValidEmail) {
             setStatus('loading');
             try {
-                await api.post('/addCalendarEvent', {
+                await api.post('/addToCalendar', {
                     name,
                     email,
                     date,
