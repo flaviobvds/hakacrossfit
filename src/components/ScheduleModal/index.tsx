@@ -6,6 +6,11 @@ import styles from './ScheduleModal.module.scss'
 import "react-datepicker/dist/react-datepicker.css";
 import { CustomDatePicker } from '../CustomDatePicker';
 import { FormEvent, useState } from 'react';
+import { ScheduleForm } from '../ScheduleForm';
+import { LoadingScreen } from '../LoadingScreen';
+import { SuccessScreen } from '../SuccessScreen';
+import { ErrorScreen } from '../ErrorScreen';
+import { ScheduleAttempt } from '../ScheduleAttempt';
 
 interface ScheduleModalProps {
     isOpen: boolean;
@@ -72,46 +77,16 @@ export function ScheduleModal({ isOpen, setIsScheduleModalOpen, workout }: Sched
                 Escolha a data e o horário de seu interesse e venha nos conhecer.
             </p>
 
-            <form className={styles.selectors}>
-
-                <input
-                    className={`${styles.nameInput} ${styles.input}`}
-                    placeholder='Nome'
-                    onChange={(e) => setName(e.target.value)}
-                />
-
-                <input
-                    className={`${styles.emailInput} ${styles.input}`}
-                    placeholder='Email'
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-
-                <div className={`${styles.dateContainer}`}>
-                    <CustomDatePicker setDate={setDate}/>
-                </div>
-
-                <select 
-                    required 
-                    className={`${styles.timeInput} ${styles.input}`}
-                    onChange={(e) => {setTime(e.target.value)}}
-                >
-                    <option value="" disabled selected>Escolha um horário</option>
-                    <option value="0600">06:00</option>
-                    <option value="0700">07:00</option>
-                    <option value="0800">08:00</option>
-                    <option value="0900">09:00</option>
-                    <option value="1600">16:00</option>
-                    <option value="1700">17:00</option>
-                </select>
-            </form>
-
-            <button
-                type='submit'
-                className={styles.scheduleButton}
-                onClick={handleSubmitForm}
-            >
-                Agendar Aula
-            </button>
+            <ScheduleAttempt 
+                status={status} 
+                email={email}
+                setStatus={setStatus}
+                setName={setName} 
+                setEmail={setEmail} 
+                setDate={setDate}
+                setTime={setTime}
+                handleSubmitForm={handleSubmitForm}
+            />
 
 
         </Modal>

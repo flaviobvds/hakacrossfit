@@ -1,0 +1,79 @@
+.selectors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.input {
+    border-radius: 5px;
+    border: 1px solid #2aa00f;
+    padding: .5rem;
+    text-align: center;
+    cursor: pointer;
+
+    width: 80%;
+    margin: .25rem 0;
+}
+
+.dateContainer {
+    width: 80%;
+    margin: .25rem 0;
+}
+
+.timeInput {
+    select:required:invalid {
+        color: gray;
+    }
+
+    option[value=""][disabled] {
+        display: none;
+        color: gray;
+    }
+
+    option {
+        color: black;
+        text-align: center;
+    }
+}
+
+.timeInput:required:invalid {
+    color: gray;
+}
+
+.scheduleButton {
+    background-color: #145a04;
+    color: white;
+    padding: .5rem 3rem;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    margin: 1.5rem auto 1rem auto;
+    cursor: pointer;
+
+    transition: filter 0.2s;
+
+    &:hover {
+        filter: opacity(0.8);
+    }
+}
+
+
+// MOBILE DESIGN:
+
+@media (max-width: 840px) {
+    
+
+    .input {
+        width: 100%;
+        margin: .25rem 0;
+    }
+
+    .dateContainer {
+        width: 100%;
+        margin: .25rem 0;
+    }
+}
