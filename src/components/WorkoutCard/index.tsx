@@ -43,7 +43,7 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
                         :
                         cardInfo.times.mon.map((time) => {
                             return (
-                                <span className={styles.time}>{time}</span>
+                                <span key={time} className={styles.time}>{time}</span>
                             )
                         })}
                 </div>
@@ -55,7 +55,7 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
                         :
                         cardInfo.times.tue.map((time) => {
                             return (
-                                <span className={styles.time}>{time}</span>
+                                <span key={time} className={styles.time}>{time}</span>
                             )
                         })}
                 </div>
@@ -67,7 +67,7 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
                         :
                         cardInfo.times.wed.map((time) => {
                             return (
-                                <span className={styles.time}>{time}</span>
+                                <span key={time} className={styles.time}>{time}</span>
                             )
                         })}
                 </div>
@@ -79,7 +79,7 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
                         :
                         cardInfo.times.thu.map((time) => {
                             return (
-                                <span className={styles.time}>{time}</span>
+                                <span key={time} className={styles.time}>{time}</span>
                             )
                         })}
                 </div>
@@ -91,7 +91,7 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
                         :
                         cardInfo.times.fri.map((time) => {
                             return (
-                                <span className={styles.time}>{time}</span>
+                                <span key={time} className={styles.time}>{time}</span>
                             )
                         })}
                 </div>
@@ -103,7 +103,7 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
                         :
                         cardInfo.times.sat.map((time) => {
                             return (
-                                <span className={styles.time}>{time}</span>
+                                <span key={time} className={styles.time}>{time}</span>
                             )
                         })}
                 </div>
@@ -115,7 +115,7 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
                     :
                         cardInfo.times.sun.map((time) => {
                             return (
-                                <span className={styles.time}>{time}</span>
+                                <span key={time} className={styles.time}>{time}</span>
                             )
                         })}
                 </div>
