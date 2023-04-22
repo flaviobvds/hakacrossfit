@@ -2,7 +2,6 @@ import { ErrorScreen } from '../ErrorScreen';
 import { LoadingScreen } from '../LoadingScreen';
 import { ScheduleForm } from '../ScheduleForm';
 import { SuccessScreen } from '../SuccessScreen';
-import styles from './ScheduleAttempt.module.scss'
 import { FormEvent } from 'react';
 
 interface ScheduleFormProps {

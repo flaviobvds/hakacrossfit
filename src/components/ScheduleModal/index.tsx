@@ -83,8 +83,7 @@ export function ScheduleModal({ isOpen, setIsScheduleModalOpen }: ScheduleModalP
                 setTime={setTime}
                 handleSubmitForm={handleSubmitForm}
             />
-
-
+            
         </Modal>
     )
 }

@@ -1,6 +1,46 @@
 import { NextApiRequest, NextApiResponse } from 'next'
+import * as SibApiV3Sdk from '@sendinblue/client'
 
-const createCalendarEvent = async (req: NextApiRequest, res: NextApiResponse) => {
+
+function sendMail(email: string, name: string, dateTimeIso: string) {
+    
+    // Initialize Sendinblue's TransactionalEmailAPI
+    const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi()
+
+    // Convert dateIso into date and time strings to be sent through email
+    const date = new Date(dateTimeIso);
+    const dateString = date.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' }); // dd/mm/yyyy
+    const timeString = date.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }); // hh:mm
+
+    // Set apiKey
+    apiInstance.setApiKey(
+        SibApiV3Sdk.TransactionalEmailsApiApiKeys.apiKey, 
+        process.env.SENDINBLUE_API_KEY!
+    );
+
+    // Send email using saved template
+    var sendSmtpEmail = {
+        to: [{
+            email: email,
+            name: name
+        }],
+        templateId: 1,
+        params: {
+            NAME: name,
+            DATE: dateString,
+            TIME: timeString
+        },
+    };
+
+    // Log results
+    apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {
+        console.log('API called successfully. Returned data: ' + data);
+    }, function (error) {
+        console.error(error);
+    });
+}
+
+export default async function (req: NextApiRequest, res: NextApiResponse) {
     const { name, email, date, time } = req.body
 
     // Combine date and time into a single ISO8601 formatted string in -4GMT timezone
@@ -22,12 +62,13 @@ const createCalendarEvent = async (req: NextApiRequest, res: NextApiResponse) =>
         },
     })
 
+    // Log and return errors
     if (!response.ok) {
         console.error('Failed to create calendar event:', response.statusText)
         return res.status(500).json({ error: 'Failed to create calendar event' })
     }
 
+    // If no errors, send confirmation email and return sucess
+    sendMail(email, name, isoDateTime)
     res.status(200).json({ message: 'Calendar event created' })
 }
-
-export default createCalendarEvent
