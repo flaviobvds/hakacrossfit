@@ -2,8 +2,9 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import * as SibApiV3Sdk from '@sendinblue/client'
 
 
-function sendMail(email: string, name: string, dateTimeIso: string) {
-    
+async function sendMail(email: string, name: string, dateTimeIso: string) {
+
+    console.log(process.env.SENDINBLUE_API_KEY!)
     // Initialize Sendinblue's TransactionalEmailAPI
     const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi()
 
@@ -11,12 +12,14 @@ function sendMail(email: string, name: string, dateTimeIso: string) {
     const date = new Date(dateTimeIso);
     const dateString = date.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' }); // dd/mm/yyyy
     const timeString = date.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }); // hh:mm
+    console.log('2')
 
     // Set apiKey
     apiInstance.setApiKey(
-        SibApiV3Sdk.TransactionalEmailsApiApiKeys.apiKey, 
+        SibApiV3Sdk.TransactionalEmailsApiApiKeys.apiKey,
         process.env.SENDINBLUE_API_KEY!
     );
+    console.log('3')
 
     // Send email using saved template
     var sendSmtpEmail = {
@@ -31,13 +34,16 @@ function sendMail(email: string, name: string, dateTimeIso: string) {
             TIME: timeString
         },
     };
+    console.log('4')
 
     // Log results
-    apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {
-        console.log('API called successfully. Returned data: ' + data);
+    await apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {
+        console.log('Email sent successfully. Returned data: ' + data);
     }, function (error) {
+        console.log('email not sent')
         console.error(error);
     });
+    console.log('5')
 }
 
 export default async function (req: NextApiRequest, res: NextApiResponse) {
