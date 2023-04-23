@@ -4,22 +4,22 @@ import * as SibApiV3Sdk from '@sendinblue/client'
 
 async function sendMail(email: string, name: string, dateTimeIso: string) {
 
-    console.log(process.env.SENDINBLUE_API_KEY!)
     // Initialize Sendinblue's TransactionalEmailAPI
     const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi()
 
-    // Convert dateIso into date and time strings to be sent through email
+    // Subtract 4 hours from the date object to adjust for the GMT-4 timezone
     const date = new Date(dateTimeIso);
+    date.setHours(date.getHours() - 4);
+
+    // Convert dateIso into date and time strings to be sent through email
     const dateString = date.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' }); // dd/mm/yyyy
     const timeString = date.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }); // hh:mm
-    console.log('2')
 
     // Set apiKey
     apiInstance.setApiKey(
         SibApiV3Sdk.TransactionalEmailsApiApiKeys.apiKey,
         process.env.SENDINBLUE_API_KEY!
     );
-    console.log('3')
 
     // Send email using saved template
     var sendSmtpEmail = {
@@ -34,7 +34,6 @@ async function sendMail(email: string, name: string, dateTimeIso: string) {
             TIME: timeString
         },
     };
-    console.log('4')
 
     // Log results
     await apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {
@@ -43,7 +42,6 @@ async function sendMail(email: string, name: string, dateTimeIso: string) {
         console.log('email not sent')
         console.error(error);
     });
-    console.log('5')
 }
 
 export default async function (req: NextApiRequest, res: NextApiResponse) {
@@ -75,6 +73,6 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
     }
 
     // If no errors, send confirmation email and return sucess
-    sendMail(email, name, isoDateTime)
+    await sendMail(email, name, isoDateTime)
     res.status(200).json({ message: 'Calendar event created' })
 }
