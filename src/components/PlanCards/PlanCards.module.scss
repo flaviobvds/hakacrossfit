@@ -1,0 +1,42 @@
+.plans {
+    background-image: url('/images/black-bg.jpg');
+    background-size: cover;
+    mask-image: linear-gradient(to top, black 95%, transparent 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.plansContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    padding-bottom: 4rem;
+}
+
+.title {
+    color: white;
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.cards {
+    width: 90%;
+    //background-color: red;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    //align-content: space-between;
+    justify-content: space-between;
+}
+
+
+// MOBILE DESIGN
+
+@media (max-width: 840px) {
+
+    .cards {
+        flex-direction: column;
+    }
+
+}

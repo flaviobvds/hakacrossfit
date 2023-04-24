@@ -1,4 +1,50 @@
 .main {
     margin-top: 5rem;
     color: white;
+    width: 100%;
+}
+
+.plansTitle {
+    display: flex;
+    align-items: center;
+    height: calc(70svh - 5rem);
+    background-color: white;
+    background-image: url('/images/classes-bg.jpg');
+    background-size: cover;
+    background-position: left 50% top 70%;
+    background-blend-mode: luminosity;
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.bgHeaderWhite {
+    background-image: url("/images/brush/brush-white.png");
+    background-size: cover;
+    height: 6.5rem;
+    width: 26rem;
+    margin-left: 20%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.bgHeaderTitleWhite {
+    margin-top: 1.6rem;
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+// MOBILE DESIGN
+
+@media (max-width: 840px) {
+    .bgHeaderWhite {
+        height: 4.5rem;
+        width: 18rem;
+        margin-left: .5rem;
+    }
+    
+    .bgHeaderTitleWhite {
+        margin-top: 1rem;
+        font-size: 1.7rem;
+    }
 }
