@@ -1,0 +1,62 @@
+.card {
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom right, #2aa00f, rgb(7, 64, 9));
+    padding: .75rem;
+    position: relative;
+    min-width: 250px;
+    width: 32%;
+    align-items: center;
+}
+
+.cardTitle {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: white;
+    width: 100%;
+    color: rgb(7, 64, 9);
+}
+
+.featList {
+    text-align: center;
+    margin-top: 3rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px dotted white;
+}
+
+.featList li {
+    font-weight: bold;
+    list-style: none;
+    margin-bottom: .75rem;
+}
+
+.times {
+    margin-top: -.7rem;
+    font-size: .75rem;
+    font-weight: normal;
+}
+
+.pricing {
+    margin-top: 1.25rem;
+}
+
+.price {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.priceDescription {
+    display: block;
+    text-align: center;
+    font-size: .75rem;
+}
+
+.main {
+    transform: translateY(+2rem);
+}
+
+// MOBILE DESIGN
