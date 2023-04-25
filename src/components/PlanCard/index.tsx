@@ -2,6 +2,7 @@ import styles from './PlanCard.module.scss'
 
 interface PlanCardProps {
     name: string,
+    description?: string,
     accessType: string,
     times?: string,
     annualPrice: string,
@@ -10,11 +11,15 @@ interface PlanCardProps {
     main?: boolean
 }
 
-export function PlanCard({ name, main, accessType, times, annualPrice, trimesterPrice, monthPrice }: PlanCardProps) {
+export function PlanCard({ name, description, main, accessType, times, annualPrice, trimesterPrice, monthPrice }: PlanCardProps) {
     return (
 
         <div className={`${styles.card} ${main ?? styles.main}`}>
             <span className={styles.cardTitle}>{name}</span>
+            {description
+                ? <span className={styles.description}>{description}</span>
+                : <span className={styles.description}>&nbsp;</span>
+            }
 
             <ul className={styles.featList}>
                 <li>{accessType}</li>

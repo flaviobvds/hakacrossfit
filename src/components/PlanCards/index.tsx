@@ -13,6 +13,7 @@ export function PlanCards() {
                     <PlanCard
                         name={'Flex'}
                         accessType={'3 Acessos por Semana'}
+                        times={'Todos os horários'}
                         annualPrice={'189'}
                         trimesterPrice={'209'}
                         monthPrice={'229'}
@@ -20,7 +21,9 @@ export function PlanCards() {
 
                     <PlanCard
                         name={'Ilimitado'}
-                        accessType={'Acessos ilimitados'}
+                        description={'Mais popular'}
+                        times={'Todos os horários'}
+                        accessType={'Acessos Ilimitados'}
                         annualPrice={'219'}
                         trimesterPrice={'239'}
                         monthPrice={'269'}
