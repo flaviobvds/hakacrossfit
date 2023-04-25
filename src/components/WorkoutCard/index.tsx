@@ -38,90 +38,90 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
 
                 <span className={styles.day}>Seg</span>
                 <div className={styles.times}>
-                    {(cardInfo.times.mon.length == 0) ?
-                        <span className={styles.noTime}>-</span>
-                        :
-                        cardInfo.times.mon.map((time) => {
+                    {(cardInfo.times.mon.length == 0)
+                        ? <span className={styles.noTime}>-</span>
+                        : cardInfo.times.mon.map((time) => {
                             return (
                                 <span key={time} className={styles.time}>{time}</span>
                             )
-                        })}
+                        })
+                    }
                 </div>
 
                 <span className={styles.day}>Ter</span>
                 <div className={styles.times}>
-                    {(cardInfo.times.tue.length == 0) ?
-                        <span className={styles.noTime}>-</span>
-                        :
-                        cardInfo.times.tue.map((time) => {
+                    {(cardInfo.times.tue.length == 0)
+                        ? <span className={styles.noTime}>-</span>
+                        : cardInfo.times.tue.map((time) => {
                             return (
                                 <span key={time} className={styles.time}>{time}</span>
                             )
-                        })}
+                        })
+                    }
                 </div>
 
                 <span className={styles.day}>Qua</span>
                 <div className={styles.times}>
-                    {(cardInfo.times.wed.length == 0) ?
-                        <span className={styles.noTime}>-</span>
-                        :
-                        cardInfo.times.wed.map((time) => {
+                    {(cardInfo.times.wed.length == 0)
+                        ? <span className={styles.noTime}>-</span>
+                        : cardInfo.times.wed.map((time) => {
                             return (
                                 <span key={time} className={styles.time}>{time}</span>
                             )
-                        })}
+                        })
+                    }
                 </div>
 
                 <span className={styles.day}>Qui</span>
                 <div className={styles.times}>
-                    {(cardInfo.times.thu.length == 0) ?
-                        <span className={styles.noTime}>-</span>
-                        :
-                        cardInfo.times.thu.map((time) => {
+                    {(cardInfo.times.thu.length == 0)
+                        ? <span className={styles.noTime}>-</span>
+                        : cardInfo.times.thu.map((time) => {
                             return (
                                 <span key={time} className={styles.time}>{time}</span>
                             )
-                        })}
+                        })
+                    }
                 </div>
 
                 <span className={styles.day}>Sex</span>
                 <div className={styles.times}>
-                    {(cardInfo.times.fri.length == 0) ?
-                        <span className={styles.noTime}>-</span>
-                        :
-                        cardInfo.times.fri.map((time) => {
+                    {(cardInfo.times.fri.length == 0)
+                        ? <span className={styles.noTime}>-</span>
+                        : cardInfo.times.fri.map((time) => {
                             return (
                                 <span key={time} className={styles.time}>{time}</span>
                             )
-                        })}
+                        })
+                    }
                 </div>
 
                 <span className={styles.day}>Sáb</span>
                 <div className={styles.times}>
-                    {(cardInfo.times.sat.length == 0) ?
-                        <span className={styles.noTime}>-</span>
-                        :
-                        cardInfo.times.sat.map((time) => {
+                    {(cardInfo.times.sat.length == 0)
+                        ? <span className={styles.noTime}>-</span>
+                        : cardInfo.times.sat.map((time) => {
                             return (
                                 <span key={time} className={styles.time}>{time}</span>
                             )
-                        })}
+                        })
+                    }
                 </div>
 
                 <span className={styles.day}>Sun</span>
                 <div className={styles.times}>
-                    {(cardInfo.times.sun.length == 0) ?
-                        <span className={styles.noTime}>-</span>
-                    :
-                        cardInfo.times.sun.map((time) => {
+                    {(cardInfo.times.sun.length == 0)
+                        ? <span className={styles.noTime}>-</span>
+                        : cardInfo.times.sun.map((time) => {
                             return (
                                 <span key={time} className={styles.time}>{time}</span>
                             )
-                        })}
+                        })
+                    }
                 </div>
             </div>
 
-            <button 
+            <button
                 className={styles.scheduleButton}
                 onClick={() => {
                     onChangeScheduleTime(cardInfo.title)

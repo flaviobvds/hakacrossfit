@@ -31,9 +31,9 @@ export function PlanCards() {
                         name={'Horário Fixo'}
                         accessType={'5 Acessos por Semana'}
                         times={'06h / 07h / 08h / 16h'}
-                        annualPrice={'189'}
-                        trimesterPrice={'209'}
-                        monthPrice={'229'}
+                        annualPrice={'199'}
+                        trimesterPrice={'219'}
+                        monthPrice={'239'}
                     />
                 </div>
 

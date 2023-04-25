@@ -55,8 +55,24 @@
     font-size: .75rem;
 }
 
-.main {
-    transform: translateY(+2rem);
+// DESKTOP-ONLY DESIGN
+
+@media (min-width: 841px) {
+    .main {
+        transform: translateY(+2rem);
+    }
 }
 
+
 // MOBILE DESIGN
+
+@media (max-width: 840px) {
+    .card {
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    .main {
+        order: -1;
+    }
+}
