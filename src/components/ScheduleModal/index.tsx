@@ -1,12 +1,9 @@
 import Modal from 'react-modal';
-import { FormEvent, useState } from 'react';
 import { FaTimes as CloseButton } from 'react-icons/fa'
-import { api } from "@/services/api";
-
-import styles from './ScheduleModal.module.scss'
-import "react-datepicker/dist/react-datepicker.css";
 
 import { ScheduleAttempt } from '../ScheduleAttempt';
+
+import styles from './ScheduleModal.module.scss'
 
 
 interface ScheduleModalProps {
@@ -18,39 +15,6 @@ Modal.setAppElement('body');
 
 
 export function ScheduleModal({ isOpen, setIsScheduleModalOpen }: ScheduleModalProps) {
-    
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [date, setDate] = useState<Date | null>(null)
-    const [time, setTime] = useState('')
-    const [status, setStatus] = useState('')
-
-    function validateEmail(emailAdress: string) {
-        const regex = /\S+@\S+\.\S+/;
-        return regex.test(emailAdress);
-    }
-
-    async function handleSubmitForm(e: FormEvent) {
-        
-        e.preventDefault();
-        const isValidEmail = (validateEmail(email));
-        
-        if (email && isValidEmail) {
-            setStatus('loading');
-            try {
-                await api.post('/addToCalendar', {
-                    name,
-                    email,
-                    date,
-                    time
-                })
-                setStatus('success');
-            }
-            catch(err) {
-                setStatus('failed');
-            }
-        }
-    }
 
     return (
         <Modal
@@ -73,17 +37,8 @@ export function ScheduleModal({ isOpen, setIsScheduleModalOpen }: ScheduleModalP
                 Escolha a data e o horário de seu interesse e venha nos conhecer.
             </p>
 
-            <ScheduleAttempt 
-                status={status} 
-                email={email}
-                setStatus={setStatus}
-                setName={setName} 
-                setEmail={setEmail} 
-                setDate={setDate}
-                setTime={setTime}
-                handleSubmitForm={handleSubmitForm}
-            />
-            
+            <ScheduleAttempt />
+
         </Modal>
     )
 }

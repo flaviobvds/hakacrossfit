@@ -1,5 +1,6 @@
 import styles from './GalleryComponent.module.scss'
 import ImageGallery from 'react-image-gallery';
+
 import "react-image-gallery/styles/scss/image-gallery.scss";
 
 const images = [
@@ -58,7 +59,6 @@ export function GalleryComponent() {
         <div className={styles.gallery}>
             <ImageGallery 
                 items={images} 
-                showThumbnails={true}
             />
         </div>
     )

@@ -1,22 +1,48 @@
+import { FormEvent, useState } from 'react';
+
 import { ErrorScreen } from '../ErrorScreen';
 import { LoadingScreen } from '../LoadingScreen';
 import { ScheduleForm } from '../ScheduleForm';
 import { SuccessScreen } from '../SuccessScreen';
-import { FormEvent } from 'react';
+import { api } from "@/services/api";
 
-interface ScheduleFormProps {
-    status: string;
-    email: string;
-    setStatus: (state: string) => void;
-    setName: (state: string) => void;
-    setEmail: (state: string) => void;
-    setDate: (state: Date | null) => void;
-    setTime: (state: string) => void;
-    handleSubmitForm: (e: FormEvent) => void;
-}
+import "react-datepicker/dist/react-datepicker.css";
 
-export function ScheduleAttempt({ status, email, setStatus, setName, setEmail, setDate, setTime, handleSubmitForm }: ScheduleFormProps) {
+export function ScheduleAttempt() {
     
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [date, setDate] = useState<Date | null>(null)
+    const [time, setTime] = useState('')
+    const [status, setStatus] = useState('')
+
+    function validateEmail(emailAdress: string) {
+        const regex = /\S+@\S+\.\S+/;
+        return regex.test(emailAdress);
+    }
+
+    async function handleSubmitForm(e: FormEvent) {
+        
+        e.preventDefault();
+        const isValidEmail = (validateEmail(email));
+        
+        if (email && isValidEmail) {
+            setStatus('loading');
+            try {
+                await api.post('/addToCalendar', {
+                    name,
+                    email,
+                    date,
+                    time
+                })
+                setStatus('success');
+            }
+            catch(err) {
+                setStatus('failed');
+            }
+        }
+    }
+
     if (status === 'loading') {
         return <LoadingScreen />
     }
