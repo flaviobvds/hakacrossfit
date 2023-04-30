@@ -30,12 +30,19 @@ export default function Map({apiKey}: MapProps) {
         zoom: 13
     };
 
+    const mapOptions = {
+        zoomControl: false,
+        mapTypeControl: false,
+        streetViewControl: false,
+    }
+
     return (
         <div className={styles.mapContainer}>
             <GoogleMap
                 apiKey={apiKey}
                 defaultCenter={defaultProps.center}
                 defaultZoom={defaultProps.zoom}
+                options={mapOptions}
             >
                 <Marker
                     lat={2.84246001583857}
