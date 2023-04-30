@@ -1,9 +1,14 @@
 import { ScheduleAttempt } from '@/components/ScheduleAttempt'
+import { GetServerSideProps } from 'next'
 
 import styles from '../styles/Contact.module.scss'
 import Map from '@/components/Map'
 
-export default function Contact() {
+interface ServerSideProps {
+    apiKey: string
+}
+
+export default function Contact({apiKey}: ServerSideProps) {
     return (
 
         <div className={styles.main}>
@@ -16,12 +21,14 @@ export default function Contact() {
             </div>
 
             <div className={styles.contactInfo}>
-                <Map />
+                <Map 
+                    apiKey={apiKey}
+                />
 
                 <div className={styles.address}>
                     <span className={styles.addressTitle}>Haka CrossFit</span>
-                    Av. João Liberato, 31 - Caranã <br/>
-                    Boa Vista - RR <br/>
+                    Av. João Liberato, 31 - Caranã <br />
+                    Boa Vista - RR <br />
                     69313-615
                 </div>
 
@@ -43,4 +50,12 @@ export default function Contact() {
         </div>
 
     )
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+    return {
+        props: {
+            apiKey: process.env.GOOGLEMAPS_API_KEY!
+        }
+    }
 }
