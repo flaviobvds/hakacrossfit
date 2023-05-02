@@ -15,7 +15,7 @@ export default function Contact({ apiKey }: ServerSideProps) {
         <section className={styles.main}>
             <div className={styles.divider}>
 
-                <div className={styles.form}>
+                <div className={styles.scheduleform}>
                     <div className={styles.scheduleTitleContainer}>
                         <span className={styles.scheduleTitle}>Agende sua Aula Experimental</span>
                     </div>
@@ -34,7 +34,7 @@ export default function Contact({ apiKey }: ServerSideProps) {
                         <span className={styles.addressTitle}>Haka CrossFit</span>
                         Av. João Liberato, 31 - Caranã <br />
                         Boa Vista - RR <br />
-                        (95) 99147-0870
+                        (95) 99124-5752
                     </div>
 
                     <div className={styles.socials}>
@@ -64,7 +64,7 @@ export default function Contact({ apiKey }: ServerSideProps) {
                     </div>
                 </div>
 
-                
+
             </div>
         </section>
 

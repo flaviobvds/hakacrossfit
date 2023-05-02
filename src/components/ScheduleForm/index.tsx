@@ -35,8 +35,9 @@ export function ScheduleForm({setName, setEmail, setDate, setTime, handleSubmitF
                     required
                     className={`${styles.timeInput} ${styles.input}`}
                     onChange={(e) => { setTime(e.target.value) }}
+                    defaultValue={'DEFAULT'}
                 >
-                    <option value="" disabled selected>Escolha um horário</option>
+                    <option value='DEFAULT' disabled>Escolha um horário</option>
                     <option value="0600">06:00</option>
                     <option value="0700">07:00</option>
                     <option value="0800">08:00</option>
