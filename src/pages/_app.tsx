@@ -5,6 +5,7 @@ import type { AppProps } from 'next/app'
 
 import '@/styles/globals.scss'
 import { Roboto, Inter } from 'next/font/google'
+import { Footer } from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <main className={inter.className}>
                 <Header />
                 <Component {...pageProps} />
+                <Footer />
 
                 <Analytics />
             </main>
