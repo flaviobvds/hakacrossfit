@@ -1,12 +1,14 @@
-import { Header } from '@/components/Header'
-import { Analytics } from '@vercel/analytics/react'
 import Head from 'next/head'
 import type { AppProps } from 'next/app'
+
 import { LanguageProvider, useLanguage } from '@/hooks/language';
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
+import { Analytics } from '@vercel/analytics/react'
 
 import '@/styles/globals.scss'
 import { Roboto, Inter } from 'next/font/google'
-import { Footer } from '@/components/Footer'
+
 
 const inter = Inter({ subsets: ['latin'] })
 

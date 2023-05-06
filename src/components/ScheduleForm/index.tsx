@@ -1,6 +1,8 @@
 import styles from './ScheduleForm.module.scss'
 import { CustomDatePicker } from '../CustomDatePicker'
 import { FormEvent } from 'react';
+import { useLanguage } from '@/hooks/language'
+import { translatedText } from '@/hooks/translatedText';
 
 interface ScheduleFormProps {
     setName: (state: string) => void;
@@ -10,14 +12,16 @@ interface ScheduleFormProps {
     handleSubmitForm: (e: FormEvent) => void;
 }
 
-export function ScheduleForm({setName, setEmail, setDate, setTime, handleSubmitForm}: ScheduleFormProps) {
+export function ScheduleForm({ setName, setEmail, setDate, setTime, handleSubmitForm }: ScheduleFormProps) {
+    const { language } = useLanguage();
+
     return (
         <>
             <form className={styles.selectors}>
 
                 <input
                     className={`${styles.nameInput} ${styles.input}`}
-                    placeholder='Nome'
+                    placeholder={translatedText.name[language as keyof typeof translatedText.home]}
                     onChange={(e) => setName(e.target.value)}
                 />
 
@@ -37,7 +41,9 @@ export function ScheduleForm({setName, setEmail, setDate, setTime, handleSubmitF
                     onChange={(e) => { setTime(e.target.value) }}
                     defaultValue={'DEFAULT'}
                 >
-                    <option value='DEFAULT' disabled>Escolha um horário</option>
+                    <option value='DEFAULT' disabled>
+                        {translatedText.chooseATime[language as keyof typeof translatedText.home]}
+                    </option>
                     <option value="0600">06:00</option>
                     <option value="0700">07:00</option>
                     <option value="0800">08:00</option>

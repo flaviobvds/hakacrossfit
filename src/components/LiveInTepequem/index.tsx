@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
+import { useLanguage } from '@/hooks/language'
+import { translatedText } from '@/hooks/translatedText';
 
 import styles from './LiveInTepequem.module.scss'
 
 export function LiveInTepequem() {
+    const { language } = useLanguage();
 
     // check if there's a window to allow video playback without hydration error
     const [hasWindow, setHasWindow] = useState(false);
@@ -23,14 +26,23 @@ export function LiveInTepequem() {
 
             <div className={styles.tepequemContent}>
                 <div className={styles.tepequemText}>
-                    <span>Treino, Comunidade e Natureza</span>
+                    <span>
+                        {translatedText.liveTitle[language as keyof typeof translatedText.home]}
+                    </span>
+
                     <p className={styles.tepequemParagraph}>
-                        Nosso evento <span>Haka Live in Tepequem</span> é sem dúvidas
-                        um de nossos grandes diferenciais. Não trata-se de um treino, mas
-                        sim de uma <span>experiência</span> única. Durante 2 dias,
-                        conecte-se com a natureza, visite as maravilhas naturais da
-                        Serra do Tepequém, integre-se com a comunidade do Crossfit e
-                        participe de uma competição desafiadora e <span>incomparável</span>.
+                        {translatedText.liveTepequem1[language as keyof typeof translatedText.home]}
+                        <span>
+                            Haka Live in Tepequem
+                        </span>
+                        {translatedText.liveTepequem2[language as keyof typeof translatedText.home]}
+                        <span>
+                            {translatedText.liveTepequem3[language as keyof typeof translatedText.home]}
+                        </span>
+                        {translatedText.liveTepequem4[language as keyof typeof translatedText.home]}
+                        <span>
+                            {translatedText.liveTepequem5[language as keyof typeof translatedText.home]}
+                        </span>
                     </p>
                 </div>
 

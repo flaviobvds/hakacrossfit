@@ -1,8 +1,12 @@
-import styles from './Features.module.scss'
-import { GiTeacher } from 'react-icons/gi'
 import { FeatureCards } from '../FeatureCards'
+import { useLanguage } from '@/hooks/language'
+import { translatedText } from '@/hooks/translatedText';
+
+import styles from './Features.module.scss'
 
 export function Features() {
+    const { language } = useLanguage();
+
     return (
         <div className={styles.features}>
             <div className={styles.featuresSection}>
@@ -13,29 +17,32 @@ export function Features() {
                         <h1 className={styles.featuresTitle}>
                             <header className={styles.bgHeader}>
                                 <span className={styles.bgHeaderTitle}>
-                                    SIM
+                                    {translatedText.yes[language as keyof typeof translatedText.home]}
                                 </span>
                             </header>
-                            Crossfit é para você
+                            {translatedText.crossfitForYou[language as keyof typeof translatedText.home]}
                         </h1>
 
                         <div className={styles.textContainer}>
-                            Nossa metodologia não escolhe público. Funciona com todos.
-                            Não é com mágica, mas sim com <span>resultados</span>.
-                            Através do Crossfit, conseguimos entregar evolução mais
-                            rápida e de forma mais segura.
-                            Conheça a revolução do mundo fitness que já mudou <span>milhões </span>
-                            de vidas por todo o mundo.
+                            {translatedText.crossfitForYou1[language as keyof typeof translatedText.home]}
+                            <span>
+                                {translatedText.crossfitForYou2[language as keyof typeof translatedText.home]}
+                            </span>
+                            {translatedText.crossfitForYou3[language as keyof typeof translatedText.home]}
+                            <span>
+                                {translatedText.crossfitForYou4[language as keyof typeof translatedText.home]}
+                            </span>
+                            {translatedText.crossfitForYou5[language as keyof typeof translatedText.home]}
 
                         </div>
                     </div>
 
                     <div className={styles.featureImages}>
-                    <img
-                                src="./images/murph.gif"
-                                alt="murph"
-                                className={styles.gif}
-                            />
+                        <img
+                            src="./images/murph.gif"
+                            alt="murph"
+                            className={styles.gif}
+                        />
                     </div>
 
                 </div>

@@ -1,6 +1,10 @@
-import { WorkoutCard } from '@/components/WorkoutCard';
 import { useEffect, useState } from 'react';
+
+import { WorkoutCard } from '@/components/WorkoutCard';
 import { ScheduleModal } from '../ScheduleModal';
+import { useLanguage } from '@/hooks/language'
+import { translatedText } from '@/hooks/translatedText';
+
 import styles from './Workouts.module.scss'
 
 
@@ -8,6 +12,7 @@ export function Workouts() {
     const [selectedWorkout, setSelectedWorkoout] = useState('');
     const [scheduleModalOpen, setScheduleModalOpen] = useState(false);
     const [clickedSchedule, setClickedSchedule] = useState(false);
+    const { language } = useLanguage();
 
     function handleScheduleTime(workout: string) {
         setSelectedWorkoout(workout);
@@ -25,7 +30,7 @@ export function Workouts() {
 
     const crossfit = {
         title: 'CrossFit',
-        description: 'Desenvolva altos níveis de condicionamento físico com exercícios variados e de elevada intensidade.',
+        description: translatedText.crossfitDesc[language as keyof typeof translatedText.home],
         image: '/images/crossfit-class-sm.jpg',
         times: {
             'mon': ['06:00', '07:00', '08:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'],
@@ -39,8 +44,8 @@ export function Workouts() {
     }
 
     const lpo = {
-        title: 'LPO',
-        description: 'Evolua seus músculos e melhore sua força praticando o LPO (Levantamento de Peso Olímpico).',
+        title: translatedText.weightlifting[language as keyof typeof translatedText.home],
+        description: translatedText.weightliftingDesc[language as keyof typeof translatedText.home],
         image: '/images/lpo-class-sm.jpg',
         times: {
             'mon': [],
@@ -55,7 +60,7 @@ export function Workouts() {
 
     const stronger = {
         title: 'Stronger',
-        description: 'Treino de movimentos acessórios para te preparar para o dia a dia',
+        description: translatedText.strongerDesc[language as keyof typeof translatedText.home],
         image: '/images/stronger-class-sm.jpg',
         times: {
             'mon': [],
@@ -70,7 +75,7 @@ export function Workouts() {
 
     const openGym = {
         title: 'Open Gym',
-        description: 'A academia disponível para você praticar o tipo de treino que preferir.',
+        description: translatedText.openGymDesc[language as keyof typeof translatedText.home],
         image: '/images/opengym-sm.jpg',
         times: {
             'mon': [],
@@ -84,32 +89,31 @@ export function Workouts() {
     }
 
     return (
-
         <>
             <section className={styles.classes}>
                 <div className={styles.classesContent}>
                     <h1 className={styles.title}>
-                        Escolha seu treino:
+                        {translatedText.chooseYourWorkout[language as keyof typeof translatedText.home]}
                     </h1>
 
                     <div className={styles.cards}>
-                        <WorkoutCard 
-                            cardInfo={crossfit} 
-                            onChangeScheduleTime={handleScheduleTime} 
-                            onClickSchedule={onClickSchedule} 
-                        />
-                        <WorkoutCard 
-                            cardInfo={lpo} 
-                            onChangeScheduleTime={handleScheduleTime} 
-                            onClickSchedule={onClickSchedule}/>
-                        <WorkoutCard 
-                            cardInfo={stronger} 
-                            onChangeScheduleTime={handleScheduleTime} 
+                        <WorkoutCard
+                            cardInfo={crossfit}
+                            onChangeScheduleTime={handleScheduleTime}
                             onClickSchedule={onClickSchedule}
                         />
-                        <WorkoutCard 
-                            cardInfo={openGym} 
-                            onChangeScheduleTime={handleScheduleTime} 
+                        <WorkoutCard
+                            cardInfo={lpo}
+                            onChangeScheduleTime={handleScheduleTime}
+                            onClickSchedule={onClickSchedule} />
+                        <WorkoutCard
+                            cardInfo={stronger}
+                            onChangeScheduleTime={handleScheduleTime}
+                            onClickSchedule={onClickSchedule}
+                        />
+                        <WorkoutCard
+                            cardInfo={openGym}
+                            onChangeScheduleTime={handleScheduleTime}
                             onClickSchedule={onClickSchedule}
                         />
                     </div>

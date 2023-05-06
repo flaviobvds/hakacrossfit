@@ -1,6 +1,8 @@
 import Modal from 'react-modal';
 import { FaTimes as CloseButton } from 'react-icons/fa'
 
+import { useLanguage } from '@/hooks/language'
+import { translatedText } from '@/hooks/translatedText';
 import { ScheduleAttempt } from '../ScheduleAttempt';
 
 import styles from './ScheduleModal.module.scss'
@@ -15,6 +17,7 @@ Modal.setAppElement('body');
 
 
 export function ScheduleModal({ isOpen, setIsScheduleModalOpen }: ScheduleModalProps) {
+    const { language } = useLanguage();
 
     return (
         <Modal
@@ -29,12 +32,13 @@ export function ScheduleModal({ isOpen, setIsScheduleModalOpen }: ScheduleModalP
             />
 
             <h1 className={styles.title}>
-                Aula Experimental
+                {translatedText.experimentalClass[language as keyof typeof translatedText.home]}
             </h1>
 
             <p className={styles.parag}>
-                Marque sua aula experimental gratuita.<br />
-                Escolha a data e o horário de seu interesse e venha nos conhecer.
+                {translatedText.experimentalClassP1[language as keyof typeof translatedText.home]}
+                <br />
+                {translatedText.experimentalClassP2[language as keyof typeof translatedText.home]}
             </p>
 
             <ScheduleAttempt />

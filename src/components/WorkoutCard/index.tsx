@@ -1,3 +1,6 @@
+import { useLanguage } from '@/hooks/language'
+import { translatedText } from '@/hooks/translatedText';
+
 import styles from './WorkoutCard.module.scss'
 
 interface WorkoutCardProps {
@@ -20,6 +23,8 @@ interface WorkoutCardProps {
 }
 
 export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }: WorkoutCardProps) {
+    const { language } = useLanguage();
+
     return (
         <div className={styles.card}>
             <div className={styles.cardImg}>
@@ -32,11 +37,15 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
             <p className={styles.cardDescription}>
                 {cardInfo.description}
             </p>
-            <span className={styles.timesTitle}> Horários </span>
+            <span className={styles.timesTitle}>
+                {translatedText.times[language as keyof typeof translatedText.home]}:
+            </span>
 
             <div className={styles.timeTable}>
 
-                <span className={styles.day}>Seg</span>
+                <span className={styles.day}>
+                    {translatedText.mon[language as keyof typeof translatedText.home]}
+                </span>
                 <div className={styles.times}>
                     {(cardInfo.times.mon.length == 0)
                         ? <span className={styles.noTime}>-</span>
@@ -48,7 +57,9 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
                     }
                 </div>
 
-                <span className={styles.day}>Ter</span>
+                <span className={styles.day}>
+                    {translatedText.tue[language as keyof typeof translatedText.home]}
+                </span>
                 <div className={styles.times}>
                     {(cardInfo.times.tue.length == 0)
                         ? <span className={styles.noTime}>-</span>
@@ -60,7 +71,9 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
                     }
                 </div>
 
-                <span className={styles.day}>Qua</span>
+                <span className={styles.day}>
+                    {translatedText.wed[language as keyof typeof translatedText.home]}
+                </span>
                 <div className={styles.times}>
                     {(cardInfo.times.wed.length == 0)
                         ? <span className={styles.noTime}>-</span>
@@ -72,7 +85,9 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
                     }
                 </div>
 
-                <span className={styles.day}>Qui</span>
+                <span className={styles.day}>
+                    {translatedText.thu[language as keyof typeof translatedText.home]}
+                </span>
                 <div className={styles.times}>
                     {(cardInfo.times.thu.length == 0)
                         ? <span className={styles.noTime}>-</span>
@@ -84,7 +99,9 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
                     }
                 </div>
 
-                <span className={styles.day}>Sex</span>
+                <span className={styles.day}>
+                    {translatedText.fri[language as keyof typeof translatedText.home]}
+                </span>
                 <div className={styles.times}>
                     {(cardInfo.times.fri.length == 0)
                         ? <span className={styles.noTime}>-</span>
@@ -96,7 +113,9 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
                     }
                 </div>
 
-                <span className={styles.day}>Sáb</span>
+                <span className={styles.day}>
+                    {translatedText.sat[language as keyof typeof translatedText.home]}
+                </span>
                 <div className={styles.times}>
                     {(cardInfo.times.sat.length == 0)
                         ? <span className={styles.noTime}>-</span>
@@ -108,7 +127,9 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
                     }
                 </div>
 
-                <span className={styles.day}>Sun</span>
+                <span className={styles.day}>
+                    {translatedText.sun[language as keyof typeof translatedText.home]}
+                </span>
                 <div className={styles.times}>
                     {(cardInfo.times.sun.length == 0)
                         ? <span className={styles.noTime}>-</span>
@@ -128,7 +149,7 @@ export function WorkoutCard({ cardInfo, onChangeScheduleTime, onClickSchedule }:
                     onClickSchedule();
                 }}
             >
-                Agende um Horário
+                {translatedText.scheduleAVisit[language as keyof typeof translatedText.home]}
             </button>
         </div>
     );

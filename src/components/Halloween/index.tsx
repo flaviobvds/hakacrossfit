@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
+import { useLanguage } from '@/hooks/language'
+import { translatedText } from '@/hooks/translatedText';
 
 import styles from './Halloween.module.scss'
 
 export function Halloween() {
+    const { language } = useLanguage();
 
     // check if there's a window to allow video playback without hydration error
     const [hasWindow, setHasWindow] = useState(false);
@@ -23,13 +26,16 @@ export function Halloween() {
 
             <div className={styles.halloweenContent}>
                 <div className={styles.halloweenText}>
-                    <span>Gostosuras ou Travessuras?</span>
+                    <span>
+                        {translatedText.halloweenTitle[language as keyof typeof translatedText.home]}
+                    </span>
+
                     <p className={styles.halloweenParagraph}>
-                        Acreditamos que Crossfit não é apenas sobre treinar, mas sim uma
-                        experiência de vida. Nosso evento anual de Halloween visa proporcionar
-                        uma <span>experiência de treino única</span>. Venha treinar, interagir, 
-                        fazer amigos, e concorrer a prêmios no nosso concurso de melhores
-                        fantasias.
+                        {translatedText.halloweenP1[language as keyof typeof translatedText.home]}
+                        <span>
+                            {translatedText.halloweenP2[language as keyof typeof translatedText.home]}
+                        </span>
+                        {translatedText.halloweenP3[language as keyof typeof translatedText.home]}
                     </p>
                 </div>
 

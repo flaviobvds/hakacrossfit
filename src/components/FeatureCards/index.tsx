@@ -1,6 +1,11 @@
+import { useLanguage } from '@/hooks/language'
+import { translatedText } from '@/hooks/translatedText';
+
 import styles from './FeatureCards.module.scss'
 
 export function FeatureCards() {
+    const { language } = useLanguage();
+
     return (
         <section className={styles.featureCardsSection}>
 
@@ -12,11 +17,22 @@ export function FeatureCards() {
                     className={styles.healthIcon}
                 />
                 <header className={styles.cardTitle}>
-                    <span>Saúde em <br/>Primeiro Lugar</span>
+                    <span>
+                        {translatedText.healthFirst1[language as keyof typeof translatedText.home]}
+                        <br />
+                        {translatedText.healthFirst2[language as keyof typeof translatedText.home]}
+                    </span>
                 </header>
                 <p className={styles.cardText}>
-                    Sua <span>saúde</span> vem antes de qualquer outro resultado.
-                    Treinos <span>adaptados</span> para você e seu corpo.
+                    {translatedText.healthCard1[language as keyof typeof translatedText.home]}
+                    <span>
+                        {translatedText.healthCard2[language as keyof typeof translatedText.home]}
+                    </span>
+                    {translatedText.healthCard3[language as keyof typeof translatedText.home]}
+                    <span>
+                        {translatedText.healthCard4[language as keyof typeof translatedText.home]}
+                    </span>
+                    {translatedText.healthCard5[language as keyof typeof translatedText.home]}
                 </p>
             </div>
 
@@ -28,12 +44,21 @@ export function FeatureCards() {
                     className={styles.healthIcon}
                 />
                 <header className={styles.cardTitle}>
-                    <span>Acompanhamento<br/>Profissional</span>
+                    <span>
+                        {translatedText.professionalCoaching1[language as keyof typeof translatedText.home]}
+                        <br />
+                        {translatedText.professionalCoaching2[language as keyof typeof translatedText.home]}
+                    </span>
                 </header>
                 <p className={styles.cardText}>
-                    Acompanhamento personalizado de profissionais <span>capacitados </span>
-                    que buscarão o seu <span>melhor desempenho</span>.
-
+                    {translatedText.coachCard1[language as keyof typeof translatedText.home]}
+                    <span>
+                        {translatedText.coachCard2[language as keyof typeof translatedText.home]}
+                    </span>
+                    {translatedText.coachCard3[language as keyof typeof translatedText.home]}
+                    <span>
+                        {translatedText.coachCard4[language as keyof typeof translatedText.home]}
+                    </span>
                 </p>
             </div>
 
@@ -45,11 +70,22 @@ export function FeatureCards() {
                     className={styles.healthIcon}
                 />
                 <header className={styles.cardTitle}>
-                    <span>Progressão <br/>sob Controle</span>
+                    <span>
+                        {translatedText.progressionUnderControl1[language as keyof typeof translatedText.home]}
+                        <br />
+                        {translatedText.progressionUnderControl2[language as keyof typeof translatedText.home]}
+                    </span>
                 </header>
+
                 <p className={styles.cardText}>
-                    Aulas elaboradas para a sua <span>evolução</span> constante
-                    e estável como atleta respeitando seus <span>limites</span>.
+                    {translatedText.progressionCard1[language as keyof typeof translatedText.home]}
+                    <span>
+                        {translatedText.progressionCard2[language as keyof typeof translatedText.home]}
+                    </span>
+                    {translatedText.progressionCard3[language as keyof typeof translatedText.home]}
+                    <span>
+                        {translatedText.progressionCard4[language as keyof typeof translatedText.home]}
+                    </span>
                 </p>
             </div>
 

@@ -1,8 +1,11 @@
 import styles from './Footer.module.scss'
 import { FaWhatsapp, FaInstagram, } from 'react-icons/fa'
 import { MdOutlineEmail } from 'react-icons/md';
+import { useLanguage } from '@/hooks/language'
+import { translatedText } from '@/hooks/translatedText';
 
 export function Footer() {
+    const { language } = useLanguage();
 
     function handleLinkClick(social: string) {
         return (event: React.MouseEvent) => {
@@ -33,16 +36,24 @@ export function Footer() {
             </div>
 
             <div className={styles.times}>
-                <span>Horários</span>
+                <span>
+                    {translatedText.times[language as keyof typeof translatedText.home]}
+                </span>
                 <div className={styles.timesContainer}>
                     <div className={styles.days}>
-                        Seg: <br />
-                        Ter: <br />
-                        Qua: <br />
-                        Qui: <br />
-                        Sex: <br />
-                        Sáb: <br />
-                        Dom:
+                        {translatedText.mon[language as keyof typeof translatedText.home]}
+                        <br />
+                        {translatedText.tue[language as keyof typeof translatedText.home]}
+                        <br />
+                        {translatedText.wed[language as keyof typeof translatedText.home]}
+                        <br />
+                        {translatedText.thu[language as keyof typeof translatedText.home]}
+                        <br />
+                        {translatedText.fri[language as keyof typeof translatedText.home]}
+                        <br />
+                        {translatedText.sat[language as keyof typeof translatedText.home]}
+                        <br />
+                        {translatedText.sun[language as keyof typeof translatedText.home]}
                     </div>
 
                     <div className={styles.dayTime}>
@@ -59,7 +70,7 @@ export function Footer() {
             </div>
 
             <div className={styles.contact}>
-                Contato
+                {translatedText.contact[language as keyof typeof translatedText.home]}
 
                 <div className={styles.socials}>
                     <div className={styles.social} onClick={handleLinkClick('whatsapp')}>

@@ -1,6 +1,10 @@
+import { useLanguage } from '@/hooks/language'
+import { translatedText } from '@/hooks/translatedText';
+
 import style from './Title.module.scss'
 
 export function Title() {
+    const { language } = useLanguage();
 
     function handleMainButton() {
         window.open(
@@ -15,10 +19,16 @@ export function Title() {
             <div className={style.headTitles}>
                 <section className={style.titleContent}>
                     <h1 className={style.title1}>
-                        Transforme <span>seu corpo.</span>
+                        {translatedText.transformYourBody1[language as keyof typeof translatedText.home]}
+                        <span>
+                            {translatedText.transformYourBody2[language as keyof typeof translatedText.home]}
+                        </span>
                     </h1>
                     <h2 className={style.title2}>
-                        Mude <span>sua vida.</span>
+                        {translatedText.changeYourLife1[language as keyof typeof translatedText.home]}
+                        <span>
+                            {translatedText.changeYourLife2[language as keyof typeof translatedText.home]}
+                        </span>
                     </h2>
 
                     <button
@@ -26,7 +36,7 @@ export function Title() {
                         type='button'
                         onClick={handleMainButton}
                     >
-                        Comece hoje
+                        {translatedText.startToday[language as keyof typeof translatedText.home]}
                     </button>
                 </section>
             </div>

@@ -1,6 +1,11 @@
+import { useLanguage } from '@/hooks/language'
+import { translatedText } from '@/hooks/translatedText';
+
 import styles from './CrossfitAffiliate.module.scss'
 
 export function CrossfitAffiliate() {
+    const { language } = useLanguage();
+
     return (
         <section className={styles.affiliate}>
             <a className={styles.anchorAffiliate} id="affiliate" />
@@ -12,16 +17,16 @@ export function CrossfitAffiliate() {
 
             <div className={styles.affiliateContent}>
                 <div className={styles.affiliateText}>
-                    <span>Metodologia aplicada da forma certa</span>
+                    <span>
+                        {translatedText.methodology[language as keyof typeof translatedText.home]}
+                    </span>
+
                     <p className={styles.affiliateParag}>
-                        Crossfit pode ser praticado em qualquer lugar.
-                        Nas ruas, nos parques, em casa. No entanto, a
-                        expertise de um coach <span>CrossFit® </span>
-                        credenciado faz toda a diferença. Somos um box
-                        credenciado oficial da marca CrossFit®, o que garante
-                        a você a certeza de que a metodologia do seu treino
-                        de Crossfit está sendo aplicada da forma certa
-                        e segura por um profissional habilitado.
+                        {translatedText.methodologyP1[language as keyof typeof translatedText.home]}
+                        <span>
+                            CrossFit®
+                        </span>
+                        {translatedText.methodologyP2[language as keyof typeof translatedText.home]}
                     </p>
                 </div>
                 <div className={styles.affiliateImage}>

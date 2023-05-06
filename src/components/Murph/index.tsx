@@ -1,6 +1,11 @@
+import { useLanguage } from '@/hooks/language'
+import { translatedText } from '@/hooks/translatedText';
+
 import styles from './Murph.module.scss'
 
 export function Murph() {
+    const { language } = useLanguage();
+
     return (
         <section className={styles.murph}>
             <a className={styles.anchorMurph} id="murph" />
@@ -23,14 +28,19 @@ export function Murph() {
                 </div>
 
                 <div className={styles.murphText}>
-                    <span>Coloque seus limites à prova</span>
+                    <span>
+                        {translatedText.testYourLimits[language as keyof typeof translatedText.home]}
+                    </span>
                     <p className={styles.murphPar}>
-                        Uma vez por ano temos um treino que vai testar seus
-                        limites. O <span>Murph</span> é um WOD longo que irá desafiar você
-                        e serve como <span>benchmark</span> no mundo do Crossfit.
-                        No Haka tratamos o Murph como um evento anual para 
-                        o qual você irá se preparar e ao final terá a satisfação
-                        de ter superado este imenso desafio.
+                        {translatedText.murph1[language as keyof typeof translatedText.home]}
+                        <span>
+                            Murph
+                        </span>
+                        {translatedText.murph2[language as keyof typeof translatedText.home]}
+                        <span>
+                            benchmark
+                        </span>
+                        {translatedText.murph3[language as keyof typeof translatedText.home]}
                     </p>
                 </div>
             </div>

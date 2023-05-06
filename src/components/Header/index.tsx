@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import { FiMenu } from 'react-icons/fi'
+import { useLanguage } from '@/hooks/language'
+import { translatedText } from '@/hooks/translatedText';
 
 import style from './Header.module.scss'
 
 export function Header() {
     const [isSticky, setIsSticky] = useState(false);
     const [isSidebarOpen, setSidebarOpen] = useState(false);
-
+    const { language } = useLanguage();
 
     // When scrolling, set sticky Header - solid black bg
     const handleScroll = () => {
@@ -36,12 +38,24 @@ export function Header() {
             </a>
 
             <nav className={style.links}>
-                <a href='/'>Início</a>
-                <a href='/hakaway'>Padrão Haka</a>
-                <a href='/classes'>Aulas</a>
-                <a href='/plans'>Planos</a>
-                <a href='/gallery'>Galeria</a>
-                <a href='/contact'>Contato</a>
+                <a href='/'>
+                    {translatedText.home[language as keyof typeof translatedText.home]}
+                </a>
+                <a href='/hakaway'>
+                    {translatedText.hakaway[language as keyof typeof translatedText.home]}
+                </a>
+                <a href='/classes'>
+                    {translatedText.classes[language as keyof typeof translatedText.home]}
+                </a>
+                <a href='/plans'>
+                    {translatedText.plans[language as keyof typeof translatedText.home]}
+                </a>
+                <a href='/gallery'>
+                    {translatedText.gallery[language as keyof typeof translatedText.home]}
+                </a>
+                <a href='/contact'>
+                    {translatedText.contact[language as keyof typeof translatedText.home]}
+                </a>
             </nav>
 
             <nav className={style.langs}>
@@ -54,13 +68,8 @@ export function Header() {
                 </button>
             </nav>
 
-            <div
-                className={style.menu}
-                onClick={toggleMenu}
-            >
-                <FiMenu
-                    size={25}
-                />
+            <div className={style.menu} onClick={toggleMenu}>
+                <FiMenu size={25} />
             </div>
 
 
@@ -78,12 +87,24 @@ export function Header() {
                     </nav>
 
                     <nav className={style.sidebarLinks}>
-                        <a href='/'>Início</a>
-                        <a href='/hakaway'>Padrão Haka</a>
-                        <a href='/classes'>Aulas</a>
-                        <a href='/plans'>Planos</a>
-                        <a href='/gallery'>Galeria</a>
-                        <a href='/contact'>Contato</a>
+                        <a href='/'>
+                            {translatedText.home[language as keyof typeof translatedText.home]}
+                        </a>
+                        <a href='/hakaway'>
+                            {translatedText.hakaway[language as keyof typeof translatedText.home]}
+                        </a>
+                        <a href='/classes'>
+                            {translatedText.classes[language as keyof typeof translatedText.home]}
+                        </a>
+                        <a href='/plans'>
+                            {translatedText.plans[language as keyof typeof translatedText.home]}
+                        </a>
+                        <a href='/gallery'>
+                            {translatedText.gallery[language as keyof typeof translatedText.home]}
+                        </a>
+                        <a href='/contact'>
+                            {translatedText.contact[language as keyof typeof translatedText.home]}
+                        </a>
                     </nav>
                 </div>
             </div>

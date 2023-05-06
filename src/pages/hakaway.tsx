@@ -3,11 +3,15 @@ import { Halloween } from '@/components/Halloween'
 import { LiveInTepequem } from '@/components/LiveInTepequem'
 import { Murph } from '@/components/Murph'
 import { Staff } from '@/components/Staff'
+import { useLanguage } from '@/hooks/language'
+import { translatedText } from '@/hooks/translatedText';
 
 import styles from '../styles/HakaWay.module.scss'
 
 
 export default function HakaWay() {
+    const { language } = useLanguage();
+
     return (
         <>
             <div className={styles.main}>
@@ -15,7 +19,7 @@ export default function HakaWay() {
 
                     <header className={styles.bgHeader}>
                         <span className={styles.bgHeaderTitle}>
-                            Padrão Haka
+                            {translatedText.hakaway[language as keyof typeof translatedText.home]}
                         </span>
                     </header>
 
@@ -30,8 +34,11 @@ export default function HakaWay() {
 
                         <div className={styles.introductionText}>
                             <p>
-                                Conheça o
-                                <span> Padrão Haka:</span>
+                                {translatedText.meetHakasWay[language as keyof typeof translatedText.home]}
+                                <span>
+                                    {translatedText.hakaway[language as keyof typeof translatedText.home]}
+                                </span>
+                                :
                             </p>
 
                             <ul className={styles.featureList}>
@@ -45,7 +52,9 @@ export default function HakaWay() {
                                     <li> Haka Live in Tepequem </li>
                                 </a>
                                 <a href='#staff'>
-                                    <li> Staff certificada CrossFit® </li>
+                                    <li>
+                                        {translatedText.certifiedStaff[language as keyof typeof translatedText.home]}
+                                    </li>
                                 </a>
                                 <a href='#halloween'>
                                     <li> Haka Halloween </li>
