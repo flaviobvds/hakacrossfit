@@ -2,6 +2,7 @@ import { Header } from '@/components/Header'
 import { Analytics } from '@vercel/analytics/react'
 import Head from 'next/head'
 import type { AppProps } from 'next/app'
+import { LanguageProvider, useLanguage } from '@/hooks/language';
 
 import '@/styles/globals.scss'
 import { Roboto, Inter } from 'next/font/google'
@@ -16,7 +17,7 @@ const roboto = Roboto({
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
-        <>
+        <LanguageProvider>
             <Head>
                 <title>Haka Crossfit</title>
             </Head>
@@ -28,6 +29,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
                 <Analytics />
             </main>
-        </>
+        </LanguageProvider>
     )
 }
