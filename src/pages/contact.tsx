@@ -1,15 +1,20 @@
 import { ScheduleAttempt } from '@/components/ScheduleAttempt'
 import { GetServerSideProps } from 'next'
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import { useLanguage } from '@/hooks/language'
+import { translatedText } from '@/hooks/translatedText';
 
 import styles from '../styles/Contact.module.scss'
 import Map from '@/components/Map'
+
 
 interface ServerSideProps {
     apiKey: string
 }
 
 export default function Contact({ apiKey }: ServerSideProps) {
+    const { language } = useLanguage();
+    
     return (
 
         <section className={styles.main}>
@@ -17,7 +22,9 @@ export default function Contact({ apiKey }: ServerSideProps) {
 
                 <div className={styles.scheduleform}>
                     <div className={styles.scheduleTitleContainer}>
-                        <span className={styles.scheduleTitle}>Agende sua Aula Experimental</span>
+                        <span className={styles.scheduleTitle}>
+                            {translatedText.scheduleYourClass[language as keyof typeof translatedText.home]}
+                        </span>
                     </div>
 
                     <ScheduleAttempt />

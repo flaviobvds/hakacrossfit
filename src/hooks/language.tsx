@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from "react";
+import { cookies } from 'next/headers';
 
 interface LanguageProviderProps {
     children: ReactNode;
@@ -14,7 +15,7 @@ const LanguageContext = createContext<LanguageContextData>({} as LanguageContext
 
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-    const [language, setLanguage] = useState('en');
+    const [language, setLanguage] = useState('br');
 
     function changeLanguage(newLanguage: string) {
         setLanguage(newLanguage)

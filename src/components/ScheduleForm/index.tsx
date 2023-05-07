@@ -58,7 +58,7 @@ export function ScheduleForm({ setName, setEmail, setDate, setTime, handleSubmit
                 className={styles.scheduleButton}
                 onClick={handleSubmitForm}
             >
-                Agendar Aula
+                {translatedText.scheduleClass[language as keyof typeof translatedText.home]}
             </button>
         </>
 

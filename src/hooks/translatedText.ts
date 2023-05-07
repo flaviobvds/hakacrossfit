@@ -16,7 +16,7 @@ export const translatedText = {
         br: "sua vida."
     },
     startToday: {
-        en: "Start today",
+        en: "Get started today",
         br: "Comece hoje"
     },
     home: {

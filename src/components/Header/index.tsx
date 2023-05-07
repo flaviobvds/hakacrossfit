@@ -4,11 +4,12 @@ import { useLanguage } from '@/hooks/language'
 import { translatedText } from '@/hooks/translatedText';
 
 import style from './Header.module.scss'
+import Link from 'next/link';
 
 export function Header() {
     const [isSticky, setIsSticky] = useState(false);
     const [isSidebarOpen, setSidebarOpen] = useState(false);
-    const { language } = useLanguage();
+    const { language, changeLanguage } = useLanguage();
 
     // When scrolling, set sticky Header - solid black bg
     const handleScroll = () => {
@@ -33,37 +34,37 @@ export function Header() {
 
     return (
         <div className={isSticky ? style.stickyHeader : style.headerContent}>
-            <a className={style.logoLink} href='https://www.hakacrossfit.com.br'>
+            <Link className={style.logoLink} href='/'>
                 <img className={style.logo} src="./images/full-logos/full-white-logo.png" alt="" />
-            </a>
+            </Link>
 
             <nav className={style.links}>
-                <a href='/'>
+                <Link href='/'>
                     {translatedText.home[language as keyof typeof translatedText.home]}
-                </a>
-                <a href='/hakaway'>
+                </Link>
+                <Link href='/hakaway'>
                     {translatedText.hakaway[language as keyof typeof translatedText.home]}
-                </a>
-                <a href='/classes'>
+                </Link>
+                <Link href='/classes'>
                     {translatedText.classes[language as keyof typeof translatedText.home]}
-                </a>
-                <a href='/plans'>
+                </Link>
+                <Link href='/plans'>
                     {translatedText.plans[language as keyof typeof translatedText.home]}
-                </a>
-                <a href='/gallery'>
+                </Link>
+                <Link href='/gallery'>
                     {translatedText.gallery[language as keyof typeof translatedText.home]}
-                </a>
-                <a href='/contact'>
+                </Link>
+                <Link href='/contact'>
                     {translatedText.contact[language as keyof typeof translatedText.home]}
-                </a>
+                </Link>
             </nav>
 
             <nav className={style.langs}>
-                <button>
+                <button onClick={() => changeLanguage('br')}>
                     <img src='./images/flags/br-flag.svg' alt="" />
                 </button>
 
-                <button>
+                <button onClick={() => changeLanguage('en')}>
                     <img src='./images/flags/uk-flag.svg' alt="" />
                 </button>
             </nav>
@@ -77,34 +78,34 @@ export function Header() {
             <div className={`${style.sideBar} ${isSidebarOpen ? style.activeSidebar : style.inactiveSidebar}`}>
                 <div className={style.sidebarContent}>
                     <nav className={style.sidebarLangs}>
-                        <button>
+                        <button onClick={() => changeLanguage('br')}>
                             <img src='./images/flags/br-flag.svg' alt="" />
                         </button>
 
-                        <button>
+                        <button onClick={() => changeLanguage('en')}>
                             <img src='./images/flags/uk-flag.svg' alt="" />
                         </button>
                     </nav>
 
                     <nav className={style.sidebarLinks}>
-                        <a href='/'>
+                        <Link href='/' onClick={toggleMenu}>
                             {translatedText.home[language as keyof typeof translatedText.home]}
-                        </a>
-                        <a href='/hakaway'>
+                        </Link>
+                        <Link href='/hakaway' onClick={toggleMenu}>
                             {translatedText.hakaway[language as keyof typeof translatedText.home]}
-                        </a>
-                        <a href='/classes'>
+                        </Link>
+                        <Link href='/classes' onClick={toggleMenu}>
                             {translatedText.classes[language as keyof typeof translatedText.home]}
-                        </a>
-                        <a href='/plans'>
+                        </Link>
+                        <Link href='/plans' onClick={toggleMenu}>
                             {translatedText.plans[language as keyof typeof translatedText.home]}
-                        </a>
-                        <a href='/gallery'>
+                        </Link>
+                        <Link href='/gallery' onClick={toggleMenu}>
                             {translatedText.gallery[language as keyof typeof translatedText.home]}
-                        </a>
-                        <a href='/contact'>
+                        </Link>
+                        <Link href='/contact' onClick={toggleMenu}>
                             {translatedText.contact[language as keyof typeof translatedText.home]}
-                        </a>
+                        </Link>
                     </nav>
                 </div>
             </div>

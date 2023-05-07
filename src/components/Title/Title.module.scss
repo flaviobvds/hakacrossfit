@@ -3,45 +3,11 @@
     width: 100%;
     background-color: black;
     background-image:
-        //linear-gradient(to top, rgba(0, 0, 0, 1.0) 5%, transparent 20%),
         url("/images/girl-weight3.jpg");
-    //background-blend-mode: luminosity;
     background-size: cover;
     height: calc(100svh + 8rem);
-    //align-items: center;
     justify-content: center;
 }
-
-/*
-.titleImage {
-    display:flex;
-    width:100%;
-    margin-left:0px;
-}
-
-.fire {
-    height: calc(100vh - 100px);
-    transform: scaleX(-1);
-    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0) 50%, transparent 80%);
-    margin-left: 0;
-}
-
-.logo {
-    filter: invert(27%) sepia(75%) saturate(839%) hue-rotate(70deg) brightness(96%) contrast(94%); // #1d6b0a
-    height: 800px;
-    width: 800px;
-    animation: blink 1s linear;
-    animation-name: blink;
-    margin-right:0;
-    margin-left:auto;
-}
-
-@keyframes blink{
-    0%{opacity: 0;}
-    50%{opacity: .5;}
-    100%{opacity: 1;}
-}
-*/
 
 .headTitles {
     display: flex;
@@ -104,7 +70,6 @@
 
 @media (max-width: 920px) {
     .main {
-        //background-blend-mode: luminosity;
         background-position: right 57% top 0;
         background-size: cover;
     }
@@ -128,7 +93,6 @@
         padding: 0.75rem 1rem;
         margin-top: 1.5rem;
         margin-left: auto;
-        //margin-right: auto;
         width: 10rem;
     }
 }
